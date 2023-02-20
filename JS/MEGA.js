@@ -37,7 +37,7 @@ let openBar     = document.getElementById("btnOpenBar")
 let closeBar    = document.getElementById("btnCloseBar")
 
 $("#btnOpenBar").click(function(){
-    $("#allShapes2").animate({'width':'45%'},1000);
+    $("#allShapes2").animate({'width':'50%'},1000);
 
     openBar.classList.add("d-none");
     closeBar.classList.remove("d-none");
