@@ -1,0 +1,168 @@
+*{
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+/* ----------------------------------------------------------- */
+
+#mainDiv{
+    z-index: 1;
+    background-image: url(../Media/Images/Background.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+#contentDiv{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* ----------------------------------------------------------- */
+
+svg{
+    transform: rotateY(180deg);
+    position: absolute;
+    z-index: -1 ;
+    width: 100%;
+}
+
+#svg_blue{
+    top: -10px;
+}
+
+/* ----------------------------------------------------------------- */
+
+#allShapes1{
+    padding-top: 150px;
+    padding-left: 150px; 
+}
+
+.myStyle{
+   width: 180px;
+   height: 80px;
+   margin: 0 15px;
+   color: white;
+   transition: all 1s;
+   border-radius: 10px;
+   transform: rotate(-15deg);
+   border: solid #0D6EFD 5px;
+   background-color: black;
+}
+.myStyle h1{
+    color: white;
+ }
+
+.myStyle:hover{
+    background-color: black;
+    border: solid #E7008A 5px;
+    transform: skew(-20deg);
+ }
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+ a h1{
+    transition: all 1s;
+ }
+
+a:hover h1{
+   transform: skew(20deg) rotate(360deg);
+}
+/* ----------------------------------------------------------------- */
+#media button{
+    width: 60px;
+    height: 60px;
+    border: solid #0D6EFD 3px;
+    transform: scale(1);
+    transition: all 0.5s;
+}
+#media button:hover{
+    transform: scale(1.1);
+    border: solid #E7008A 3px;
+}
+
+/* ----------------------------------------------------------------- */
+#allShapes2{
+    width: 0%;
+}
+
+#allShapes2 button{
+    transition: all 0.5s;
+    width: 100%; 
+    height: 50px;
+}
+#allShapes2 .btn-outline-primary:hover{
+    transform: scale(1.25);
+    background-color: #E7008A;
+    border: solid white;
+}
+
+/* ---------------------------------------------------- */
+#myLogo{
+    width: 100px;
+}
+/* ---------------------------------------------------- */
+
+#btnOpenBar{
+    color: #0D6EFD;
+    border: solid #0D6EFD;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+
+#btnCloseBar{
+    color: #E7008A;
+    border: solid #E7008A;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+/* ----------------------------------------------------------------- */
+
+@media screen and (max-width:600px){
+    svg{
+        width: 180%;
+        left:0;
+    }
+}
+
+@media screen and (min-width:601px) and (max-width:768px){
+    svg{
+        width: 170%;
+        left: 0;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:992px){
+
+    svg{
+        width: 160%;
+        left: -35%;
+    }
+}
+
+@media screen and (min-width:993px) and (max-width:1200px){
+    svg{
+        width: 130%;
+        left: 0;
+    }
+}
+
+@media screen and (min-width:1201px){
+    svg{
+        width: 100%;
+        left: 0%;
+    }
+}
+
+
+
