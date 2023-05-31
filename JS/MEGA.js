@@ -13,21 +13,21 @@ function socialMedia(x){
 
 function codePage(x){
     if(x == 1){
-        window.open("https://eng-m-ma9dy.github.io/HTML/","_blank")
+        window.open("https://eng-m-ma9dy.github.io/FrontEnd-HTML/","_blank")
     }else if(x == 2){
-        window.open("https://eng-m-ma9dy.github.io/CSS/","_blank")
+        window.open("https://eng-m-ma9dy.github.io/FrontEnd-CSS/","_blank")
     }else if(x == 3){
-        window.open("https://eng-m-ma9dy.github.io/SASS/","_blank")
+        window.open("https://eng-m-ma9dy.github.io/FrontEnd-SASS/","_blank")
     }else if(x == 4){
-        window.open("https://eng-m-ma9dy.github.io/Bootstrap/","_blank")
+        window.open("https://eng-m-ma9dy.github.io/FrontEnd-Bootstrap/","_blank")
     }else if(x == 5){
-        window.open("https://eng-m-ma9dy.github.io/JS/","_blank")
+        window.open("https://eng-m-ma9dy.github.io/FrontEnd-JS/","_blank")
     }else if(x == 6){
-        window.open("https://eng-m-ma9dy.github.io/TS/","_blank")
+        window.open("https://eng-m-ma9dy.github.io/FrontEnd-TS/","_blank")
     }else if(x == 7){
-        window.open("https://eng-m-ma9dy.github.io/React/","_blank")
+        window.open("https://eng-m-ma9dy.github.io/FrontEnd-React/","_blank")
     }else if(x == 8){
-        window.open("https://eng-m-ma9dy.github.io/Angular/","_blank")
+        window.open("https://eng-m-ma9dy.github.io/FrontEnd-Angular/","_blank")
     }
 }
 
