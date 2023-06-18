@@ -4,8 +4,8 @@
 /* ----------------------------------------------------------------------------- */
 #headerSection{
     background-image: url(../src/Images/BG-Section-Header.jpg);
-    /*
     background-size: cover;
+    /*
     background-attachment: fixed;
     */
     background-position: center center;
@@ -90,8 +90,8 @@
 
 #mainSection{
     background-image: url(../src/Images/BG-Section-Main.jpg);
-    /*
     background-size: cover;
+    /*
     background-attachment: fixed;
     */
     background-position: center center;
