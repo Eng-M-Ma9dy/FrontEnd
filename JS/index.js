@@ -1,6 +1,23 @@
 "use strict";
 
 /* ----------------------------------------------------------------------------- */
+/* Loader ---------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------- */
+
+let setTimeoutOrder = setTimeout(function(){
+    
+  document.getElementById("loadingDiv").classList.add("d-none")
+
+  document.getElementById("headerSection").classList.remove("d-none")
+
+  document.getElementById("mainSection").classList.remove("d-none")
+
+  document.getElementById("contact").classList.remove("d-none")
+
+
+},3000)
+
+/* ----------------------------------------------------------------------------- */
 /* Home Section ---------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------- */
 
