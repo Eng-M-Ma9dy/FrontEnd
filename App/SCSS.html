@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Eng: Mohamed Magdy Mettwally">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="The Reference For Front-End Developers, It's Contain All Code The Developers use in coding, HTML, CSS, SASS, Bootstrap, JS, TS, Angular2">
+        <meta name="keywords" content="HTML CSS SASS Bootstrap JS TS Angular2 Coding Developers Front-End">
+
+        <title>SCSS</title>
+        <meta property="og:image" content="./../src/Images/Logo-MM-Cover.jpg">
+        <link rel="website icon" type="PNG" href="./../src/Images/Logo-MM-Title.png">
+
+        <!-- Offline Bootstrap CSS : -->
+        <link href="../CSS/bootstrap.min.css" rel="stylesheet"/>
+
+        <!-- FontAwesome CSS : -->
+        <link href="../CSS/all.min.css" rel="stylesheet"/>
+                
+        <!-- My Shared CSS : -->
+        <link href="../CSS/shared.css" rel="stylesheet"/>
+        
+        <!-- My Style CSS : -->
+        <link href="../CSS/SCSS.css" rel="stylesheet"/>
+
+    </head>
+
+    <body>
+
+        <!---------------------------------------------------------------------------------------------------------------------------->
+        <!----------------------------------------------------------------------------------------------------------------------------> 
+        <!-- Loader -->
+        <!------------>
+
+        <div id="myLoading">
+
+            <!---------------------------------------------------------------->
+    
+            <div id="loadingDiv" class="d-flex justify-content-center align-items-center">
+                <div id="loaderDiv" class="loader--style6" title="5">
+                    <svg id="loaderSize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="30px"
+                        viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                        <rect x="0" y="13" width="4" height="5" fill="blue">
+                            <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0s" dur="0.6s"
+                                repeatCount="indefinite" />
+                            <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0s" dur="0.6s"
+                                repeatCount="indefinite" />
+                        </rect>
+                        <rect x="10" y="13" width="4" height="5" fill="white">
+                            <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.15s" dur="0.6s"
+                                repeatCount="indefinite" />
+                            <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.15s" dur="0.6s"
+                                repeatCount="indefinite" />
+                        </rect>
+                        <rect x="20" y="13" width="4" height="5" fill="blue">
+                            <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.3s" dur="0.6s"
+                                repeatCount="indefinite" />
+                            <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.3s" dur="0.6s"
+                                repeatCount="indefinite" />
+                        </rect>
+                    </svg>
+                </div>
+            </div>
+    
+            <!---------------------------------------------------------------->
+    
+        </div>
+
+        <!---------------------------------------------------------------------------------------------------------------------------->
+        <!----------------------------------------------------------------------------------------------------------------------------> 
+        <!-- Header -->
+        <!------------>
+
+        <header id="headerSection" class="w-100 vh-100 mb-1">
+
+            <div id="headerDiv" class="overflow-hidden position-relative">
+
+                <svg id="svg_white" viewBox="0 0 1440 320">
+                    <path fill="white" fill-opacity="1" d="M0,0L24,16C48,32,96,64,144,80C192,96,240,96,288,80C336,64,384,32,432,48C480,64,528,128,576,144C624,160,672,128,720,133.3C768,139,816,181,864,197.3C912,213,960,203,1008,208C1056,213,1104,235,1152,245.3C1200,256,1248,256,1296,250.7C1344,245,1392,235,1416,229.3L1440,224L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"></path>
+                </svg>
+
+                <svg id="svg_blueviolet" viewBox="0 0 1440 320">
+                    <path fill="blueviolet" fill-opacity="1" d="M0,0L24,16C48,32,96,64,144,80C192,96,240,96,288,80C336,64,384,32,432,48C480,64,528,128,576,144C624,160,672,128,720,133.3C768,139,816,181,864,197.3C912,213,960,203,1008,208C1056,213,1104,235,1152,245.3C1200,256,1248,256,1296,250.7C1344,245,1392,235,1416,229.3L1440,224L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"></path>
+                </svg>
+
+                <div id="headerDiv_Content" class="d-flex flex-column justify-content-center align-items-start">
+
+    
+                    <div class="ms-3 text-white">
+
+                        <h4>Front End..</h4>
+                        <h1 id="theMainTitle" class="fw-bold">SCSS</h1>
+                        <h5 class="text-end">Reference</h5>
+
+                    </div>
+                                
+                    <div>
+                        <div class="d-flex justify-content-start ms-3 mb-3">
+        
+                            <div class="rotating-text">
+                    
+                                <p class="kf text-light">I'm a </p>
+                    
+                                <p>
+                                    <span class="word w-1"> M.Magdy    </span>
+                                    <span class="word w-2"> Full-Stack </span>
+                                    <span class="word w-3"> Developer  </span>
+                                </p>
+                            
+                            </div>
+        
+                        </div>
+        
+                        <div class="text-light ms-3 d-flex justify-content-start">
+                
+                            <button onclick="openLink('www.linkedin.com/in/eng-m-ma9dy/')" class="SM-BTN-icon LinkedIn rounded-circle me-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </button>
+        
+                            <button onclick="openLink('github.com/Eng-M-Ma9dy')" class="SM-BTN-icon GitHub rounded-circle mx-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-github"></i>
+                            </button>
+        
+                            <button onclick="openLink('www.facebook.com/eng.m.ma9dy/')" class="SM-BTN-icon Facebook rounded-circle mx-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-facebook"></i>
+                            </button>
+                
+                            <button onclick="openLink('www.instagram.com/eng.m.ma9dy/')" class="SM-BTN-icon Instagram rounded-circle mx-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-instagram"></i>
+                            </button>
+                
+                        </div>
+                        
+                    </div>
+                
+                </div>
+
+            </div>
+
+        </header>
+
+        <!---------------------------------------------------------------------------------------------------------------------------->
+        <!----------------------------------------------------------------------------------------------------------------------------> 
+        <!-- Main -->
+        <!---------->
+
+        <main id="mainSection" class="text-white mb-1">
+        
+            <div id="mainDiv" class="py-5">
+
+<!------------------------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------------------------>
+    
+    <div class="mt-5">
+        <button id="homeBTN" onclick="openLink('eng-m-ma9dy.github.io/FrontEnd/')" class="border-0 mx-auto text-white bg-primary fs-1 d-flex justify-content-center align-items-center">
+            <i class="px-2 border-0 fa-solid fa-house-chimney"></i> <span id="homeText" class="d-none">Home</span>
+        </button>
+    </div>
+
+
+
+
+    <div class="container-xl mb-5">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="mt-5  text-center">( <span class="text-primary">SCSS</span> ) </h1>
+
+                <form class="form-group col-10 col-lg-8 mx-auto my-5">    
+
+                    <input id="sDB1_1" onkeyup="searchDB(this.value)" type="=text" placeholder="Search" class="form-control mt-3 mb-4">    
+
+                </form>
+
+                <!-- About SCSS ------------------------------------------------------------------------->
+
+                <div  class="mb-4 p-md-5 p-3 mega">
+                    <div class="border mb-4 p-4">
+                        <h5>  
+<pre>
+
+* SCSS / SASS :
+
+- SCSS : ( CSS Pre Processing )
+
+- SCSS : ( Work With Compiler )
+
+- SASS the Same SCSS Without ; and {} Work By Tap
+
+- For Work By SASS Download VS-Code Extension ( Live Sass Compiler )
+
+- Create SCSS Folder and create style.scss file 
+
+- click on Watch-SASS in bottom Bar in VS-Code
+
+- The Extension Will be convert and Create style.css file
+
+- Link style.css to HTML Sheet
+
+</pre>
+                        </h5>
+                    </div>
+
+                </div>
+
+                <!-- Variables ------------------------------------------------------------------------------>
+
+                <section class="my-5 p-md-5 p-3 mega">
+                    <div class="btnDiv d-flex justify-content-start align-items-center">
+                        <button id="btn-1" class="border-0 bg-transparent text-danger fs-2 mb-0"
+                            onclick="changeScope(1)">&#62&#62&#62</button>
+                        <label for="btn-1" style="cursor: pointer;">
+                            <h2 class="mb-0">* Variables : </h2>
+                        </label>
+                    </div>
+                
+                    <div id="button1" class="my-5 d-none">
+                
+                        <div class="row d-flex flex-wrap justify-content-around align-items-center py-3 my-3">
+                
+                            <div class="col-lg-6 text-center">
+                                <h2>SCSS Code </h2>
+                                <pre style="height: 400px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+                
+    // Variables
+    //-------------------------------------------------------
+                        
+    // Variables In CSS Didn't Work With All Browsers
+                        
+    // Variables In SCSS Work With All Browsers
+                        
+    //-------------------------------------------------------
+                        
+    // I Will Set All Variables in Partial File (_variables)
+                        
+    // Partial File : The Name Of File Start By ( _ ) for didn't do Compiler This File From SCSS to CSS
+                        
+    // do import _variables file to this file
+                        
+    // @import './_variables.scss'
+                        
+    // and i can remove _ and fileNameExtension from the import
+                        
+    // @import './variables'
+                        
+    //-------------------------------------------------------
+                    
+    @import './variables';
+                        
+    //-------------------------------------------------------
+                        
+    $mainColor: #FF009D;
+    $mainMargin: 40px 0px;
+    $mainFont: 4rem;
+                    
+    $secondColor: blueviolet;
+    $secondMargin: 100px 0px;
+    $secondFont: 6rem;
+                    
+    //-------------------------------------------------------
+                    
+    h1 {
+        color: $mainColor;
+        font-size: $mainFont;
+    }
+                        
+    h2 {
+        margin: $mainMargin;
+    }
+                
+</code>
+                                            </pre>
+                            </div>
+                
+                
+                
+                            <div class="col-lg-6 text-center">
+                                <h2>HTML Code</h2>
+                                <pre style="height: 400px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+                    
+    &#60h1&#62 MOHAMED MAGDY &#60/h1&#62
+                    
+    &#60h2&#62 Full-Stack Developer &#60/h2&#62
+                    
+</code>
+                                        </pre>
+                            </div>
+                
+                
+                
+                            <div class="col-12 text-center my-4">
+                                <h2>Web View </h2>
+                                <div class="text-center border p-5 my-4 overflow-auto">
+                
+                                    <h1 style="color: #FF009D; font-size: 4rem;">MOHAMED MAGDY</h1>
+                                    <h2 style="margin: 40px 0px;">Full-Stack Developer</h2>
+                
+                                </div>
+                            </div>
+                
+                        </div>
+                
+                    </div>
+                
+                </section>
+
+                <!-- Relations ------------------------------------------------------------------------------>
+
+                <section class="my-5 p-md-5 p-3 mega">
+                    <div class="btnDiv d-flex justify-content-start align-items-center">
+                        <button id="btn-2" class="border-0 bg-transparent text-danger fs-2 mb-0"
+                            onclick="changeScope(2)">&#62&#62&#62</button>
+                        <label for="btn-2" style="cursor: pointer;">
+                            <h2 class="mb-0">* Relations : </h2>
+                        </label>
+                    </div>
+                
+                    <div id="button2" class="my-5 d-none">
+                
+                        <div class="row d-flex flex-wrap justify-content-around align-items-center py-3 my-3">
+                
+                            <div class="col-lg-6 text-center">
+                                <h2>SCSS Code </h2>
+                                <pre style="height: 400px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+                 
+    .parent{
+
+        background-color: #FF009D;
+    
+        padding: 70px - 30px; // 40px
+    
+        position: relative;
+    
+        display: flex;
+    
+        align-items: center;
+    
+        flex-direction: column;
+    
+    
+    
+        p {
+            font : {
+                size: 30px;
+                weight: 400;
+                style: italic;
+                family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            };
+    
+            margin: {
+                top: 15px;
+                right:30px;
+                bottom: 80px;
+                left: 30px
+            };
+        }
+    
+        .child{
+            width: 200px;
+            color: black;
+            font-size: 2rem;
+            border: solid black 5px;
+        }
+    
+    
+        .child1{
+            background-color: blueviolet;
+        }
+        
+        .child2{
+            background-color: yellow;
+        }
+        
+        .child3{
+            background-color: blue;
+        }
+        
+        .child4{
+            background-color: greenyellow;
+        }
+        
+        .child5{
+            background-color: darkmagenta;
+        }
+    
+        //----------------------------
+
+        // (&) == (this) == (.parent)
+    
+        &:hover{
+    
+            .child{
+                color: white;
+            }
+    
+            .child2 , .child4{
+                color: black;
+            }
+        }
+    
+        &::before{
+            content: "";
+            position: absolute;
+            top: 120px;
+            left: 0px;
+            width: 175px;
+            height: 10px;
+            background-color: black;
+        }
+    
+        &::after{
+            content: "";
+            position: absolute;
+            top: 120px;
+            right: 0px;
+            width: 175px;
+            height: 10px;
+            background-color: black;
+        }
+    
+    }
+
+</code>
+                                            </pre>
+                            </div>
+                
+                
+                
+                            <div class="col-lg-6 text-center">
+                                <h2>CSS Code</h2>
+                                <pre style="height: 400px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+                    
+    .parent{
+
+        background-color: $mainColor;
+
+        padding: calc(70px - 30px);
+
+        position: relative;
+    
+        display: flex;
+    
+        align-items: center;
+    
+        flex-direction: column;
+    }
+    
+    .parent p {
+
+        font-size: 30px;
+        font-weight: 300;
+        font-style: italic;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        margin-top: 15px;
+        margin-right: 30px;
+        margin-bottom: 80px;
+        margin-left: 30px;
+
+    }
+    
+    .parent .child{
+
+        width: 200px;
+        color: black;
+        font-size: 2rem;
+        border: solid black 5px;
+
+    }
+    
+    .parent .child1{
+
+        background-color: blueviolet;
+
+    }
+    
+    .parent .child2{
+
+        background-color: yellow;
+
+    }
+    
+    .parent .child3{
+
+        background-color: blue;
+
+    }
+    
+    .parent .child4{
+
+        background-color: greenyellow;
+
+    }
+    
+    .parent .child5{
+
+        background-color: darkmagenta;
+
+    }
+    
+    //---------------------
+
+    .parent:hover .child {
+
+        color: white;
+
+    }
+    
+    .parent:hover .child2, .parent:hover .child4 {
+
+        color: black;
+      
+    }
+    
+    .parent::before {
+
+        content: "";
+        position: absolute;
+        top: 120px;
+        left: 0px;
+        width: 175px;
+        height: 10px;
+        background-color: black;
+
+    }
+
+    .parent::after {
+
+        content: "";
+        position: absolute;
+        top: 120px;
+        right: 0px;
+        width: 175px;
+        height: 10px;
+        background-color: black;
+
+    }
+                    
+</code>
+                                        </pre>
+                            </div>
+                
+                
+                
+                            <div class="col-12 text-center my-4">
+                                <h2>HTML Code</h2>
+                                <pre class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+
+    &#60div class="parent"&#62
+
+        &#60p&#62 Full-Stack &#60/p&#62
+
+        &#60div class="child child1"&#62Child 1&#60/div&#62
+        &#60div class="child child2"&#62Child 2&#60/div&#62
+        &#60div class="child child3"&#62Child 3&#60/div&#62     
+        &#60div class="child child4"&#62Child 4&#60/div&#62
+        &#60div class="child child5"&#62Child 5&#60/div&#62
+
+    &#60/div&#62
+                    
+</code>
+                                        </pre>
+                            </div>
+                
+                            <div class="col-12 text-center my-4">
+                                <h2>Web View </h2>
+                                <div class="text-center border p-5 my-4 overflow-auto">
+                                    
+                                    <div class="parentMegaMan">
+
+                                        <p> Full-Stack </p>
+                                
+                                        <div class="childMegaMan child1MegaMan text-center">Child 1</div>
+                                        <div class="childMegaMan child2MegaMan text-center">Child 2</div>
+                                        <div class="childMegaMan child3MegaMan text-center">Child 3</div>     
+                                        <div class="childMegaMan child4MegaMan text-center">Child 4</div>
+                                        <div class="childMegaMan child5MegaMan text-center">Child 5</div>
+                                
+                                    </div>
+                
+                                </div>
+                            </div>
+
+                        </div>
+                
+                    </div>
+                
+                </section>
+
+                <!-- IF / For / Array ------------------------------------------------------------------------------>
+
+                <section class="my-5 p-md-5 p-3 mega">
+                    <div class="btnDiv d-flex justify-content-start align-items-center">
+                        <button id="btn-3" class="border-0 bg-transparent text-danger fs-2 mb-0"
+                            onclick="changeScope(3)">&#62&#62&#62</button>
+                        <label for="btn-3" style="cursor: pointer;">
+                            <h2 class="mb-0">* IF/For/Array :</h2>
+                        </label>
+                    </div>
+                
+                    <div id="button3" class="my-5 d-none">
+                
+                        <div class="row d-flex flex-wrap justify-content-around align-items-center py-3 my-3">
+                
+                            <div class="col-lg-6 text-center">
+                                <h2>SCSS Code </h2>
+                                <pre style="height: 400px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+                 
+    .parent{
+
+        //-----------------------------------------------------------------
+        // Do For Loop
+        //---------------
+        // From 1  : First Ele 1
+        // To   10 : Last  Ele 9
+    
+        @for $i from 1 to 10 {
+    
+            .child_#{$i}{
+    
+                // For Use Color Name By Hexadecimal Without Convert
+    
+                // $i/10 : For Change Value Of Alpha Every Round
+    
+                background-color: rgba($color: #08c, $alpha: $i / 10);
+                width: 50px + ( 30px * $i );
+                text-align: center;
+                color: black;
+                padding: 10px;
+                border: none;
+    
+            }
+    
+        }
+    
+        //-----------------------------------------------------------------
+        // For Make Array 
+        //----------------
+    
+        $children: child_1 , child_3 , child_5 , child_7 , child_9 ;
+    
+        // For Loop on Array
+    
+        // $class The Name For Every Ele in Array
+    
+        // $children name of Array i want do loop
+    
+        @each $class in $children {
+    
+            .#{$class}{
+                border-top: solid black 5px;
+            }
+    
+        }
+    
+        //-----------------------------------------------------------------
+        // IF Else
+        //----------
+    
+        $left:left;
+    
+        $right:right;
+        
+        .left{
+    
+            width: 300px;
+            height: 150px;
+            overflow: hidden;
+            background-color: teal;
+    
+            float: $left;
+    
+            padding-#{$left}: 40px ;
+            margin-#{$left}: 40px ;
+        
+        }
+        
+        .right{
+    
+            width: 300px;
+            height: 150px;
+            overflow: hidden;
+            background-color: tomato;
+    
+            float: $right;
+    
+            padding-#{$right}: 40px ;
+            margin-#{$right}: 40px ;
+        
+        
+        }
+    
+        $dir:rtl;
+        
+        @if $dir == ltr {
+        
+            $left:left;
+            $right:right;
+        
+        }@else{
+        
+            $left:right;
+            $right:left;
+        }
+    
+    }
+
+</code>
+                                            </pre>
+                            </div>
+                
+                
+                
+                            <div class="col-lg-6 text-center">
+                                <h2>HTML Code</h2>
+                                <pre style="height: 400px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+
+    &#60div class="parent"&#62
+
+        &#60div class="d-flex flex-column justify-content-center align-items-center"&#62
+
+            &#60div class="child_1"&#62 Child 1 &#60/div&#62
+            &#60div class="child_2"&#62 Child 2 &#60/div&#62
+            &#60div class="child_3"&#62 Child 3 &#60/div&#62
+            &#60div class="child_4"&#62 Child 4 &#60/div&#62
+            &#60div class="child_5"&#62 Child 5 &#60/div&#62
+            &#60div class="child_6"&#62 Child 6 &#60/div&#62
+            &#60div class="child_7"&#62 Child 7 &#60/div&#62
+            &#60div class="child_8"&#62 Child 8 &#60/div&#62
+            &#60div class="child_9"&#62 Child 9 &#60/div&#62
+
+        &#60/div&#62
+
+
+        &#60!-------------------------------------------------&#62
+
+        &#60div class="left mt-5"&#62
+
+            &#60p&#62 Left 1 &#60/p&#62
+            &#60p&#62Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, animi!&#60/p&#62
+
+        &#60/div&#62
+
+        &#60div class="right mt-5"&#62
+
+            &#60p&#62 Right 2 &#60/p&#62
+            &#60p&#62Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, animi!&#60/p&#62
+
+        &#60/div&#62
+
+        &#60div class="clearfix"&#62&#60/div&#62
+
+    &#60/div&#62
+                    
+</code>
+                                        </pre>
+                            </div>
+                
+                
+                
+                            <div class="col-12 text-center my-4">
+
+                                <h2>Web View</h2>
+
+                                <div class="text-center border p-5 my-4 overflow-auto bg-dark">
+                                    
+                                    <div class="parentMega">
+
+                                        <div class="d-flex flex-column justify-content-center align-items-center">
+
+                                            <div class="child_1Mega">Child 1</div>
+                                            <div class="child_2Mega">Child 2</div>
+                                            <div class="child_3Mega">Child 3</div>
+                                            <div class="child_4Mega">Child 4</div>
+                                            <div class="child_5Mega">Child 5</div>
+                                            <div class="child_6Mega">Child 6</div>
+                                            <div class="child_7Mega">Child 7</div>
+                                            <div class="child_8Mega">Child 8</div>
+                                            <div class="child_9Mega">Child 9</div>
+                                            
+                                        </div>
+                                        <!------------------------------------------------->
+                                        
+                                        <div class="leftMega mt-5">
+                            
+                                            <p>Left 1</p>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, animi!</p>
+                                        
+                                        </div>
+                            
+                                        <div class="rightMega mt-5">
+                            
+                                            <p>Right 2</p>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, animi!</p>
+                                        
+                                        </div>
+                                
+                                        <div class="clearfix"></div>
+                            
+                                    </div>
+
+                                </div>
+
+                            </div>
+                
+                        </div>
+                
+                    </div>
+                
+                </section>
+
+                <!-- Placeholder Class ------------------------------------------------------------------------------>
+
+                <section class="my-5 p-md-5 p-3 mega">
+                    <div class="btnDiv d-flex justify-content-start align-items-center">
+                        <button id="btn-4" class="border-0 bg-transparent text-danger fs-2 mb-0"
+                            onclick="changeScope(4)">&#62&#62&#62</button>
+                        <label for="btn-4" style="cursor: pointer;">
+                            <h2 class="mb-0">* Placeholder :</h2>
+                        </label>
+                    </div>
+                
+                    <div id="button4" class="my-5 d-none">
+                
+                        <div class="row d-flex flex-wrap justify-content-around align-items-center py-3 my-3">
+                
+                            <div class="col-lg-6 text-center">
+                                <h2>SCSS Code </h2>
+                                <pre style="height: 400px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+                 
+    // I Will Make Placeholder Class For Center Any Ele by set % before name of class without .
+    // because if i don't use this Placeholder Class, SCSS don,t compiler and set this class in CSS File
+    // and i can set all Placeholder Class in partial file _placeholder.scss and make import for this file
+    
+    %eleCenter{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #eleMega{
+    
+        background-color: rgb(21, 47, 196);
+    
+        color: black;
+    
+        padding: 48px 0;
+    
+        margin: 48px 0;
+    
+    
+        // For Use Placeholder Class
+    
+        @extend %eleCenter
+        
+    };
+
+</code>
+                                            </pre>
+                            </div>
+                
+                
+                
+                            <div class="col-lg-6 text-center">
+                                <h2>HTML Code</h2>
+                                <pre style="height: 400px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+
+    &#60div id="eleMega"&#62
+
+        &#60div&#62 style="width: 50px; height: 50px; background-color: black; border: solid white;"&#62&#60/div&#62
+    
+    &#60/div&#62
+                    
+</code>
+                                        </pre>
+                            </div>
+                
+                
+                
+                            <div class="col-12 text-center my-4">
+
+                                <h2>Web View</h2>
+
+                                <div class="text-center border p-5 my-4 overflow-auto">
+                                    
+                                    <div class="bg-primary py-5 my-5 d-flex justify-content-center align-items-center">
+                                        <div style="width: 50px; height: 50px; background-color: black; border: solid white;"></div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                
+                        </div>
+                
+                    </div>
+                
+                </section>
+
+                <!-- Mixin/Function ------------------------------------------------------------------------------>
+
+                <section class="my-5 p-md-5 p-3 mega">
+                    <div class="btnDiv d-flex justify-content-start align-items-center">
+                        <button id="btn-5" class="border-0 bg-transparent text-danger fs-2 mb-0"
+                            onclick="changeScope(5)">&#62&#62&#62</button>
+                        <label for="btn-5" style="cursor: pointer;">
+                            <h2 class="mb-0">* Mixin/Function :</h2>
+                        </label>
+                    </div>
+                
+                    <div id="button5" class="my-5 d-none">
+                
+                        <div class="row d-flex flex-wrap justify-content-around align-items-center py-3 my-3">
+                
+                            <div class="col-lg-6 text-center">
+                                <h2>SCSS Code </h2>
+                                <pre style="height: 400px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+                 
+    //----------------------------------------------------
+    // Mixin :
+    // -------
+    
+    @mixin divProperties($bg , $bo , $co) {
+    
+        width: 100px;
+        height: 80px;
+        margin: 30px;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        background-color: $bg ;
+        border: solid $bo ;
+        color: $co ;
+    
+    }
+    
+    .div1{
+    
+        @include divProperties (green , white , white)
+    }
+    
+    .div2{
+    
+        @include divProperties (blueviolet , black , white)
+    
+    };
+    
+    
+    //----------------------------------------------------
+    // Function :
+    // ----------
+    
+    @function convertPxToRem($value){
+    
+        $res : $value / 16;
+    
+        @return #{$res}rem;
+    
+    }
+    
+    #myNamed{
+    
+        font-size: convertPxToRem(70);
+    }
+    
+    // @mixin return Block Of Code
+    
+    // @function return value
+    
+    // and i can set all mixin in partial file _mixin.scss and make import for this file
+    
+    // and i can set all function in partial file _mixin.scss and make import for this file
+    
+
+</code>
+                                            </pre>
+                            </div>
+                
+                
+                
+                            <div class="col-lg-6 text-center">
+                                <h2>HTML Code</h2>
+                                <pre style="height: 400px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+
+    &#60div class="bg-primary w-100 py-5 my-5 d-flex justify-content-center overflow-hidden"&#62    
+
+        &#60div class="div1"&#62DIV 1 &#60/div&#62
+        &#60div class="div2"&#62DIV 2 &#60/div&#62
+
+    &#60/div&#62
+
+    &#60!------------------------------------------------&#62
+
+    &#60h4 id="myNamed" class="my-5"&#62MAGDY&#60/h4&#62
+                    
+</code>
+                                        </pre>
+                            </div>
+                
+                
+                
+                            <div class="col-12 text-center my-4">
+
+                                <h2>Web View</h2>
+
+                                <div class="text-center border p-5 my-4 overflow-auto">
+                                    
+                                    <div>
+                                        <div class="bg-primary w-100 py-5 my-5 d-flex justify-content-center overflow-hidden">
+
+                                            <div class="div1MegaMega">DIV 1</div>
+                                            <div class="div2MegaMega">DIV 2</div>
+                                
+                                        </div>
+                                
+                                        <h4 id="myNamedMega" class="my-5">MAGDY</h4>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                
+                        </div>
+                
+                    </div>
+                
+                </section>
+
+                <!-- Example ------------------------------------------------------------------------------>
+
+                <section class="my-5 p-md-5 p-3 mega">
+                    <div class="btnDiv d-flex justify-content-start align-items-center">
+                        <button id="btn-6" class="border-0 bg-transparent text-danger fs-2 mb-0"
+                            onclick="changeScope(6)">&#62&#62&#62</button>
+                        <label for="btn-6" style="cursor: pointer;">
+                            <h2 class="mb-0">* Example :</h2>
+                        </label>
+                    </div>
+                
+                    <div id="button6" class="my-5 d-none">
+                
+                        <div class="row d-flex flex-wrap justify-content-around align-items-center py-3 my-3">
+                
+                            <div class="col-lg-6 text-center">
+                                <h2>SCSS Code </h2>
+                                <pre style="height: 400px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+                 
+    @mixin changeArrowDirection ($direction , $color , $size) {
+
+        width: 0;
+        height: 0;
+        border: solid transparent #{$size}px;
+    
+        
+    
+        @if $direction == left {
+    
+            border-right-color: $color;
+    
+        }@else if $direction == right {
+    
+            border-left-color: $color;
+    
+        }@else if $direction == top {
+    
+            border-bottom-color: $color;
+    
+        }@else if $direction == bottom {
+    
+            border-top-color: $color;
+    
+        }
+    
+    }
+    
+    
+    #brd{
+    
+        @include changeArrowDirection( top , white ,150)
+    
+    }    
+
+</code>
+                                            </pre>
+                            </div>
+                
+                
+                
+                            <div class="col-lg-6 text-center">
+                                <h2>HTML Code</h2>
+                                <pre style="height: 400px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+
+    &#60div class="d-flex justify-content-center align-items-center my-5"&#62
+    
+        &#60div id="brd"&#62&#60/div&#62
+
+    &#60/div&#62                    
+</code>
+                                        </pre>
+                            </div>
+                
+                
+                
+                            <div class="col-12 text-center my-4">
+
+                                <h2>Web View</h2>
+
+                                <div class="text-center border p-5 my-4 overflow-auto">
+                                    
+                                    <div class="d-flex justify-content-center align-items-center my-5">
+                                        <div id="brd"></div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                
+                        </div>
+                
+                    </div>
+                
+                </section>
+
+<!------------------------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------------------------>
+
+            </div>
+
+        </main>
+
+        <!---------------------------------------------------------------------------------------------------------------------------->
+        <!----------------------------------------------------------------------------------------------------------------------------> 
+        <!-- Footer -->
+        <!------------>
+
+        <footer id="contact" class="py-5 bg-black text-white">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-6 col-xl-3 my-3 my-lg-0">
+
+                        <h4 class="mb-4 pb-4 border-bottom">Author :</h4>
+
+                        <h1>M O H A M E D</h1>
+                        
+                        <h1>M A G D Y</h1>
+    
+                    </div>
+    
+                    <div class="col-md-6 col-xl-3 my-3 my-lg-0">
+    
+                        <h4 class="mb-4 pb-4 border-bottom">Contact :</h4>
+
+                        <h6><a href="mailto:Eng.M.Ezzeldeen@gmail.com" class="a_None text-white">Email: Eng.M.Ezzeldeen@gmail.com</a></h6>  
+
+                        <button class="bg-transparent text-white border-0 p-0" onclick="openLink('wa.me/+201285880488')"><h6 class="mb-0">Phone : +20 12 858 80 4 88</h6></button>    
+                        
+                        <div class="d-flex justify-content-start my-3">
+        
+                            <button onclick="openLink('github.com/Eng-M-Ma9dy')" class="SM-BTN-icon GitHub    me-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-github"></i>
+                            </button>
+                
+                            <button onclick="openLink('www.linkedin.com/in/eng-m-ma9dy/')" class="SM-BTN-icon LinkedIn  mx-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </button>
+        
+                            <button onclick="openLink('www.facebook.com/eng.m.ma9dy/')" class="SM-BTN-icon Facebook  mx-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-facebook"></i>
+                            </button>
+                
+                            <button onclick="openLink('www.instagram.com/eng.m.ma9dy/')" class="SM-BTN-icon Instagram ms-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-instagram"></i>
+                            </button>
+                
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-md-6 col-xl-3 my-3 my-lg-0">
+    
+                        <h4 class="mb-4 pb-4 border-bottom">My Pages :</h4>
+
+                        <h6><a href="mailto:Info.Unit.Alex@gmail.com" class="a_None text-white">Info.Unit.Alex@gmail.com</a></h6>  
+
+                        <button class="bg-transparent text-white border-0 p-0" onclick="openLink('wa.me/+201140155633')"><h6 class="mb-0">Phone : +20 11 40 155 6 33</h6></button>    
+                        
+                        <div class="text-light d-flex justify-content-start my-3">
+        
+                            <button onclick="openLink('www.facebook.com/info.unit.iu/')" class="SM-BTN-icon Facebook  me-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-facebook"></i>
+                            </button>
+                                            
+                            <button onclick="openLink('www.tiktok.com/@info.unit.iu')" class="SM-BTN-icon TikTok    mx-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </button>
+                
+                            <button onclick="openLink('www.instagram.com/info.unit.iu')" class="SM-BTN-icon Instagram mx-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-instagram"></i>
+                            </button>
+
+                            <button onclick="openLink('youtube.com/@Info.Unit-IU')" class="SM-BTN-icon Youtube   ms-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-youtube"></i>
+                            </button>
+                
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-md-6 col-xl-3 mt-3 mt-lg-0 d-none d-md-flex justify-content-start justify-content-xl-center">
+
+                        <button class="bg-transparent text-white border-0 p-0" onclick="openLink('eng-m-ma9dy.github.io/Portfolio/')"><img src="../src/Images/Logo-MM.jpg" class="footer_logo rounded-circle" alt=""></button>
+            
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+        <!---------------------------------------------------------------------------------------------------------------------------->
+        <!----------------------------------------------------------------------------------------------------------------------------> 
+        <!-- JS Links -->
+        <!-------------->
+        
+        <!-- Offline Bootstrap js : -->
+        <script src="../JS/bootstrap.bundle.min.js"></script>
+
+        <!-- jQuery js : -->
+        <script src="../JS/jquery-3.6.3.min.js"></script>
+
+        <!-- My Shared js : -->
+        <script src="../JS/shared.js"></script>
+
+        <!-- My JS Sheet : -->
+        <script src="JS/index.js"></script>
+    
+    </body>
+</html>

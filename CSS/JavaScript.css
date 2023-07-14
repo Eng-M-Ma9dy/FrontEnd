@@ -1,0 +1,115 @@
+/* ----------------------------------------------------------------------------- */
+
+#myLoading11{
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+#loaderDiv11{
+margin: 0 0 2em;
+width: 20%;
+text-align: center;
+padding: 1em;
+margin: 0 auto 1rem;
+display: inline-block;
+vertical-align: top;
+}
+
+#loaderSize11{
+transform: scale(3);
+}
+
+/* ------------------------------------------------------ */
+
+.banner_parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  padding: 20px;
+  margin: auto;
+}
+
+.rotating-text1 {
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: white;
+  transform: translateX(-80px);
+}
+.rotating-text1 p {
+  display: inline-flex;
+  margin: 0;
+  vertical-align: top;
+}
+.rotating-text1 p .megaWord {
+  position: absolute;
+  display: flex;
+  opacity: 0;
+}
+.rotating-text1 p .megaWord .letter {
+  transform-origin: center center 25px;
+}
+.rotating-text1 p .megaWord .letter.out {
+  transform: rotateX(90deg);
+  transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+}
+.rotating-text1 p .megaWord .letter.in {
+  transition: 0.38s ease;
+}
+.rotating-text1 p .megaWord .letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.wMega-1 {
+  color: #e74c3c;
+}
+
+.wMega-2 {
+  color: #8e44ad;
+}
+
+.wMega-3 {
+  color: #3498db;
+}
+
+.wMega-4 {
+  color: #2ecc71;
+}
+
+.wMega-5 {
+  color: #f1c40f;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+#color-box{
+  display: flex;
+  align-items: start;
+  position: relative;
+  left: 0;
+  bottom: 10%;
+}
+
+.color-option{
+  text-align: center;
+  padding: 5px;
+
+}
+
+.color-option span{
+  width: 30px;
+  height: 30px;
+  background-color: yellowgreen;
+  display: inline-block;
+}
+
+#color-box i{
+  background-color: #0B6EFD;
+  padding: 15px;
+}

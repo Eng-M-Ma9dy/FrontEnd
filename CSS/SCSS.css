@@ -1,0 +1,261 @@
+.parentMegaMan {
+  background-color: #FF009D;
+  padding: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.parentMegaMan p {
+  font-size: 30px;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 15px;
+  margin-right: 30px;
+  margin-bottom: 80px;
+  margin-left: 30px;
+}
+.parentMegaMan .childMegaMan {
+  width: 200px;
+  color: black;
+  font-size: 2rem;
+  border: solid black 5px;
+}
+.parentMegaMan .child1MegaMan {
+  background-color: blueviolet;
+}
+.parentMegaMan .child2MegaMan {
+  background-color: yellow;
+}
+.parentMegaMan .child3MegaMan {
+  background-color: blue;
+}
+.parentMegaMan .child4MegaMan {
+  background-color: greenyellow;
+}
+.parentMegaMan .child5MegaMan {
+  background-color: darkmagenta;
+}
+.parentMegaMan:hover .childMegaMan {
+  color: white;
+}
+.parentMegaMan:hover .child2MegaMan, .parentMegaMan:hover .child4MegaMan {
+  color: black;
+}
+.parentMegaMan::before {
+  content: "";
+  position: absolute;
+  top: 120px;
+  left: 0px;
+  width: 175px;
+  height: 10px;
+  background-color: black;
+}
+.parentMegaMan::after {
+  content: "";
+  position: absolute;
+  top: 120px;
+  right: 0px;
+  width: 175px;
+  height: 10px;
+  background-color: black;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+.parentMega .child_1Mega {
+  background-color: rgba(0, 136, 204, 0.1);
+  width: 80px;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+.parentMega .child_2Mega {
+  background-color: rgba(0, 136, 204, 0.2);
+  width: 110px;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+.parentMega .child_3Mega {
+  background-color: rgba(0, 136, 204, 0.3);
+  width: 140px;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+.parentMega .child_4Mega {
+  background-color: rgba(0, 136, 204, 0.4);
+  width: 170px;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+.parentMega .child_5Mega {
+  background-color: rgba(0, 136, 204, 0.5);
+  width: 200px;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+.parentMega .child_6Mega {
+  background-color: rgba(0, 136, 204, 0.6);
+  width: 230px;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+.parentMega .child_7Mega {
+  background-color: rgba(0, 136, 204, 0.7);
+  width: 260px;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+.parentMega .child_8Mega {
+  background-color: rgba(0, 136, 204, 0.8);
+  width: 290px;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+.parentMega .child_9Mega {
+  background-color: rgba(0, 136, 204, 0.9);
+  width: 320px;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+.parentMega .child_1Mega {
+  border-top: solid black 5px;
+}
+.parentMega .child_3Mega {
+  border-top: solid black 5px;
+}
+.parentMega .child_5Mega {
+  border-top: solid black 5px;
+}
+.parentMega .child_7Mega {
+  border-top: solid black 5px;
+}
+.parentMega .child_9Mega {
+  border-top: solid black 5px;
+}
+.parentMega .leftMega {
+  width: 300px;
+  height: 150px;
+  overflow: hidden;
+  background-color: teal;
+  float: left;
+  padding-left: 40px;
+  margin-left: 40px;
+}
+.parentMega .rightMega {
+  width: 300px;
+  height: 150px;
+  overflow: hidden;
+  background-color: tomato;
+  float: right;
+  padding-right: 40px;
+  margin-right: 40px;
+}
+
+#eleMega {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#eleMega {
+  background-color: rgb(21, 47, 196);
+  color: black;
+  padding: 48px 0;
+  margin: 48px 0;
+}
+
+.div1 {
+  width: 100px;
+  height: 80px;
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: green;
+  border: solid white;
+  color: white;
+}
+
+.div2 {
+  width: 100px;
+  height: 80px;
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blueviolet;
+  border: solid black;
+  color: white;
+}
+
+#myNamed {
+  font-size: 4.375rem;
+}
+
+#brd {
+  width: 0;
+  height: 0;
+  border: solid transparent 150px;
+  border-bottom-color: white;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+
+.div1MegaMega {
+  width: 100px;
+  height: 80px;
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: green;
+  border: solid white;
+  color: white;
+}
+
+.div2MegaMega {
+  width: 100px;
+  height: 80px;
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blueviolet;
+  border: solid black;
+  color: white;
+}
+
+#myNamedMega {
+  font-size: 4.375rem;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+#brd {
+  width: 0;
+  height: 0;
+  border: solid transparent 150px;
+  border-bottom-color: white;
+}
+
