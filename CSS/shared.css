@@ -68,6 +68,10 @@ body{
   
   #headerDiv_Content h1{
       font-family: sans-serif;
+      font-size: 4.5rem;
+  }
+  #headerDiv_Content h2{
+      font-family: sans-serif;
       font-size: 3.25rem;
   }
   .rotating-text {
