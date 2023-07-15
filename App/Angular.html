@@ -1,0 +1,2799 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Eng: Mohamed Magdy Mettwally">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="The Reference For Front-End Developers, It's Contain All Code The Developers use in coding, HTML, CSS, SASS, Bootstrap, JS, TS, Angular2">
+        <meta name="keywords" content="HTML CSS SASS Bootstrap JS TS Angular2 Coding Developers Front-End">
+
+        <title>Angular</title>
+        <meta property="og:image" content="./../src/Images/Logo-MM-Cover.jpg">
+        <link rel="website icon" type="PNG" href="./../src/Images/Logo-MM-Title.png">
+
+        <!-- Offline Bootstrap CSS : -->
+        <link href="../CSS/bootstrap.min.css" rel="stylesheet"/>
+
+        <!-- FontAwesome CSS : -->
+        <link href="../CSS/all.min.css" rel="stylesheet"/>
+                
+        <!-- My Shared CSS : -->
+        <link href="../CSS/shared.css" rel="stylesheet"/>
+
+    </head>
+
+    <body>
+
+        <!---------------------------------------------------------------------------------------------------------------------------->
+        <!----------------------------------------------------------------------------------------------------------------------------> 
+        <!-- Loader -->
+        <!------------>
+
+        <div id="myLoading">
+
+            <!---------------------------------------------------------------->
+    
+            <div id="loadingDiv" class="d-flex justify-content-center align-items-center">
+                <div id="loaderDiv" class="loader--style6" title="5">
+                    <svg id="loaderSize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="30px"
+                        viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                        <rect x="0" y="13" width="4" height="5" fill="blue">
+                            <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0s" dur="0.6s"
+                                repeatCount="indefinite" />
+                            <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0s" dur="0.6s"
+                                repeatCount="indefinite" />
+                        </rect>
+                        <rect x="10" y="13" width="4" height="5" fill="white">
+                            <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.15s" dur="0.6s"
+                                repeatCount="indefinite" />
+                            <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.15s" dur="0.6s"
+                                repeatCount="indefinite" />
+                        </rect>
+                        <rect x="20" y="13" width="4" height="5" fill="blue">
+                            <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.3s" dur="0.6s"
+                                repeatCount="indefinite" />
+                            <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.3s" dur="0.6s"
+                                repeatCount="indefinite" />
+                        </rect>
+                    </svg>
+                </div>
+            </div>
+    
+            <!---------------------------------------------------------------->
+    
+        </div>
+
+        <!---------------------------------------------------------------------------------------------------------------------------->
+        <!----------------------------------------------------------------------------------------------------------------------------> 
+        <!-- Header -->
+        <!------------>
+
+        <header id="headerSection" class="w-100 vh-100 mb-1">
+
+            <div id="headerDiv" class="overflow-hidden position-relative">
+
+                <svg id="svg_white" viewBox="0 0 1440 320">
+                    <path fill="white" fill-opacity="1" d="M0,0L24,16C48,32,96,64,144,80C192,96,240,96,288,80C336,64,384,32,432,48C480,64,528,128,576,144C624,160,672,128,720,133.3C768,139,816,181,864,197.3C912,213,960,203,1008,208C1056,213,1104,235,1152,245.3C1200,256,1248,256,1296,250.7C1344,245,1392,235,1416,229.3L1440,224L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"></path>
+                </svg>
+
+                <svg id="svg_blueviolet" viewBox="0 0 1440 320">
+                    <path fill="blueviolet" fill-opacity="1" d="M0,0L24,16C48,32,96,64,144,80C192,96,240,96,288,80C336,64,384,32,432,48C480,64,528,128,576,144C624,160,672,128,720,133.3C768,139,816,181,864,197.3C912,213,960,203,1008,208C1056,213,1104,235,1152,245.3C1200,256,1248,256,1296,250.7C1344,245,1392,235,1416,229.3L1440,224L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"></path>
+                </svg>
+
+                <div id="headerDiv_Content" class="d-flex flex-column justify-content-center align-items-start">
+
+    
+                    <div class="ms-3 text-white">
+
+                        <h4>Front End..</h4>
+                        <h1 id="theMainTitle" class="fw-bold">Angular</h1>
+                        <h5 class="text-end">Reference</h5>
+
+                    </div>
+                                
+                    <div>
+                        <div class="d-flex justify-content-start ms-3 mb-3">
+        
+                            <div class="rotating-text">
+                    
+                                <p class="kf text-light">I'm a </p>
+                    
+                                <p>
+                                    <span class="word w-1"> M.Magdy    </span>
+                                    <span class="word w-2"> Full-Stack </span>
+                                    <span class="word w-3"> Developer  </span>
+                                </p>
+                            
+                            </div>
+        
+                        </div>
+        
+                        <div class="text-light ms-3 d-flex justify-content-start">
+                
+                            <button onclick="openLink('www.linkedin.com/in/eng-m-ma9dy/')" class="SM-BTN-icon LinkedIn rounded-circle me-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </button>
+        
+                            <button onclick="openLink('github.com/Eng-M-Ma9dy')" class="SM-BTN-icon GitHub rounded-circle mx-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-github"></i>
+                            </button>
+        
+                            <button onclick="openLink('www.facebook.com/eng.m.ma9dy/')" class="SM-BTN-icon Facebook rounded-circle mx-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-facebook"></i>
+                            </button>
+                
+                            <button onclick="openLink('www.instagram.com/eng.m.ma9dy/')" class="SM-BTN-icon Instagram rounded-circle mx-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-instagram"></i>
+                            </button>
+                
+                        </div>
+                        
+                    </div>
+                
+                </div>
+
+            </div>
+
+        </header>
+
+        <!---------------------------------------------------------------------------------------------------------------------------->
+        <!----------------------------------------------------------------------------------------------------------------------------> 
+        <!-- Main -->
+        <!---------->
+
+        <main id="mainSection" class="text-white mb-1">
+        
+            <div id="mainDiv" class="py-5">
+
+<!------------------------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------------------------>
+    
+    <div class="mt-5">
+        <button id="homeBTN" onclick="openLink('eng-m-ma9dy.github.io/FrontEnd/')" class="border-0 mx-auto text-white bg-primary fs-1 d-flex justify-content-center align-items-center">
+            <i class="px-2 border-0 fa-solid fa-house-chimney"></i> <span id="homeText" class="d-none">Home</span>
+        </button>
+    </div>
+
+
+
+
+    <div class="container-xl mb-5">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="mt-5  text-center">( <span class="text-primary">Angular</span> ) </h1>
+
+                <form class="form-group col-10 col-lg-8 mx-auto my-5">    
+
+                    <input id="sDB1_1" onkeyup="searchDB(this.value)" type="=text" placeholder="Search" class="form-control mt-3 mb-4">    
+
+                </form>
+
+                <!-- About Angular ------------------------------------------------------------------------->
+
+                <div  class="mb-4 p-md-5 p-3 mega">
+                    <div class="border mb-4 p-4">
+                        <h5>  
+<pre>
+
+    * For Use Angular :
+    ---------------------
+
+    1- Install Node.JS From Official Website
+    2- Open New Folder Of Project in VS Code
+    3- Open New Terminal (CMD) By (control + `)
+    4- Set Command &#62;&#62; npm install -g @angular/cli
+                   &#62;&#62; npm install -g live-server --save-dev
+
+       &#62; NPM        | Node Package Manager
+       &#62; -g         | For Install Angular Global For All Projects 
+       &#62; --save-dev | For Install Services In Local Device (don't Upload to Server)
+
+    ---------------------------------------------------
+
+    * For Start New Project Angular :
+    ----------------------------------
+
+    1. Create New Folder (NPM-Project)
+    
+    2. Open (NPM-Project) Folder in VS-Code
+    
+    3. Open Terminal in VS-Code (control + `) |or| From Top VS-Code Bar (Terminal)
+     - Default Terminal of VS-Code PS(PowerShell) convert it to CMD(Command Prompt) from Right of Top Terminal Bar  
+    
+    4. NPM init Command
+    
+     - NPM-Project&#62; npm init
+        - Enter Package Name 			&#62; (lowercase)
+        - version: (1.0.0)                	&#62; Press Enter	| (1:Break change | 0:New feature | 0:pug)
+        - description:                    	&#62; New Project
+        - Entry Point: (index.js)  		&#62; Press Enter	| Name of JS File
+        - Test command:				&#62; Press Enter
+        - Git Repository:			&#62; Press Enter
+        - keywords: 				&#62; Angular
+        - Author: 				&#62; Eng. Mohamed Magdy
+        - license: (ISC)			&#62; Press Enter
+        - Is this OK? (yes) 			&#62; yes
+    
+    5. Install Other Packages from NPM
+     
+     - install Angular CLI 
+     * go to npm website search on angular-cli &#62; install &#62; copy link | set in CMD !!!!!!!!!
+     * I Using This Service for Build all My Websites, i need to install This Service on My PC Global
+     - NPM-Project&#62;npm i -g @angular/cli 	| (-g): for install This Service Global for all Project
+
+
+     - install live-Server
+     * go to npm website search on live-server &#62; install &#62; copy link | Set in CMD !!!!!!!!!!
+     * I Using This Service Only During I Build My Website, I don't Need To This Service After Upload My Project on Host
+     - NPM-Project&#62;npm install -g live-server --save-dev 	| (--save-dev): for install this Service for build my site before upload only
+
+
+     - install Bootstrap
+     * go to npm website search on bootstrap &#62; install &#62; copy link | Set in CMD
+     - NPM-Project&#62;npm i bootstrap
+    
+     * if i need to install Different version of bootstrap
+     - NPM&#62;npm i bootstrap@4.2
+    
+    
+     - install JQuery
+     * go to npm website search on JQuery &#62; install &#62; copy link | Set in CMD
+     - NPM-Project&#62;npm i jquery        
+
+     * if i need to install Different version of JQuery
+     - NPM-Project&#62;npm i JQuery@2.1
+    
+        
+     - Notes:
+     - if i want copy project i will delete node_modules before a copy, for install this folder set command >> npm i
+
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    
+    6. For Start A New Project by Angular-CLI
+    
+     - NPM-Project&#62;ng new App1								| (ng new)	: for start a new angular project       | App1: Title (Name of App)
+     - Would you like to add Angular routing?  		        &#62; y 			| (routing)	: move between pages with out reloaded
+     - Which stylesheet format would you like to use? CSS	&#62; Press Enter		| (CSS)		: for use css as style sheet	
+        
+    
+    7. After The End of Install The New (Angular) App, Close This Folder and Terminal From VS-Code and open App1 Folder in VS-Code and Open Terminal
+     * Folder |App1&#62;src&#62;assets| This Folder For Media
+    
+     * For open By live-server, open New Terminal
+     - App1&#62;ng serve --open |or| App1&#62;ng serve --o | (--open)	: for open index.html in default browser
+    
+     * This File |App1&#62;src&#62;index.HTML| i don't edit any thing in this file, 
+       This File Included Selector &#60;app-root&#62;&#60;/app-root&#62; to this File |App1&#62;src&#62;app&#62;app.component.HTML|, and All My Work in this file
+    
+     * install bootstrap && fontawesome && jquery, Open New Terminal
+     - App1&#62;npm i bootstrap
+     - App1&#62;npm i @fortawesome/fontawesome-free
+     - App1&#62;npm i jquery
+     
+    * or use this command for install bootstrap |&| fontawesome |&| jquery
+     - App1&#62;npm i bootstrap @fortawesome/fontawesome-free jquery
+    
+     * link CSS File of bootstrap for show in all Components
+     - go to this path |app1&#62;angular.json| Under assets &#62; style Section (line 25) Set "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+     - go to this path app1&#62;angular.json | Under assets &#62; style Section (line 25) Set "./node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+    
+    
+     * link jS file of bootstrap for show in all component (html file)
+     - go to this path app1&#62;angular.json | Under assets &#62; scripts Section (After Style Section) Set "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+     - go to this path app1&#62;angular.json | Under assets &#62; scripts Section (After Style Section) Set "./node_modules/jquery/dist/jquery.min.js"
+        
+    
+     * After The End From Edit (Angular.Json) in Any Time, Close The Live-Server and Open Again
+     - For close Live-Server Go to First Terminal (node) and Press Control + C
+     - For open Press (Arrow Up) and Press Enter in The Same Terminal |or| Set this Command -App1&#62;ng serve --open
+    
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    8. every thing in site is component alike Home or About page and every component included 3 file,
+        and by default every app installed included one Module |App1&#62;src&#62;app&#62;app.module.ts|,
+        the module included import and declarations for other components.
+    
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    
+    9. Manually Create Component Home (Not Used)
+    
+        1. Create New Folder Home in |app1&#62;src&#62;app&#62;Home| and Create 3 file in This Folder | home.component.html / home.component.css / home.component.ts |
+        2. And Set &#60;h1&#62; Hello From Home &#60;/h1&#62; in home.component.html For Show In Main HTML Page 
+        3. Copy content from |App1&#62;src&#62;app&#62;app.component.ts| file and Paste |App1&#62;src&#62;app&#62;Home&#62;home.component.ts|,
+           and change | selector: selector: 'app-root',      | to | selector: 'app-home',			|
+           and change | templateUrl: './app.component.html', | to | templateUrl: './home.component.html', |
+           and change | styleUrls: ['./app.component.css']   | to | styleUrls: ['./home.component.css']   |
+           and change | export class AppComponent {}  	     | to | export class HomeComponent {}		|
+    
+        4. After this Step take the Name of Selector and Copy | &#60;app-home&#62;&#60;/app-home&#62; | from this file and Paste in | app1&#62;src&#62;app&#62;app.component.html |
+    
+        5. After this Step go to | App1&#62;src&#62;app&#62;app.module.ts | and Set |HomeComponent,| in |@NgModule({declarations: []}),| under |AppComponent,|
+           and in the same file Make import for HomeComponent by add this command in top of file | import { HomeComponent } from './Home/home.component'; |
+        
+        * Notes: The (Angular) make decorators in TS File: the decorators (Start By @) is a function take some details, from this details it is select your type are you |component or modules|
+                 The decorators details is |name of selector, templateUrl, styleUrls,| for create decorators set | @component({details}) in ts file,
+                 The first export class after decorators is the class of decorators
+    
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    10. Create Component About by CLI
+         
+         1. In New Terminal Window
+
+            - App1&#62; ng generate component about --skip-tests=true |or| App1&#62; ng g c about --skip-tests=true
+
+            - (--skip-tests=true): for ignore Test file during create new Component
+         
+         2. After this Step take the Name of Selector and Copy | &#60;app-about&#62;&#60;/app-about&#62; | and Paste in   | app1&#62;src&#62;app&#62;app.component.html |
+    
+        - Every Component have a selector i can set this selector of Component in any place for view content of Component.html
+        - Main Path of Index.html File project&#62;src&#62;app | I don't set any thing in this file Set only selector of app.Component.html &#60;app-root&#62;&#60;/app-root&#62;
+        - and i can set any thing in app.Component.html
+
+        Note: 
+        - Decorator Of Component | @Component
+        - constructor | the firs function run after create new component, put i don't set code in Decorator
+        - ngOInit | the second function run after create new component i set any code i want run after component start
+
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    11. Manually Create interface product For Create Object
+    
+        1. in TS File in The Top Of Sheet Under The Imports
+
+        interface product{
+
+            name:string,
+            type:string,
+            img:string,
+            color:string,
+            price:number,
+            availability:boolean,
+            details:Function,
+
+        }
+
+        product:product={
+
+            name:"I-Phone",
+            type:"14 Pro Max",
+            img:"../assets/Images/iPhone-14-Pro.jpg",
+            color:"Black / Gold",
+            price:14000,
+            availability:true,
+            details: ()=>{
+              window.alert(`Phone`)
+            }
+        
+        }
+    
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    12. Create interface product by CLI
+         
+        1. In New Terminal Window
+
+            - App1&#62; ng generate interface product |or| App1&#62; ng g i product
+
+        2. Set Interface in This File
+
+            interface product{
+              name:string,
+              type:string,
+              img:string,
+              color:string,
+              price:number,
+              availability:boolean,
+              details:Function,
+            }
+         
+        3. Do Import product In file you use object type product in it
+
+            import { Product } from '../product';
+
+            product:product={
+                name:"I-Phone",
+                type:"14 Pro Max",
+                img:"../assets/Images/iPhone-14-Pro.jpg",
+                color:"Black / Gold",
+                price:14000,
+                availability:true,
+                details: ()=>{
+                  window.alert(`Phone`)
+                }
+            }
+        
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    13. Create service shared by CLI
+     
+        1. In New Terminal Window
+
+            - App1&#62; ng generate service shared |or| App1&#62; ng g s shared
+
+        2. Set TS Code Shared in This File
+
+            export class SharedService {
+
+                constructor() {}
+
+                //------------------------------------------------------
+
+                arrayProduct:megaProduct[] = [
+                  {name:"Toshiba" , price:5000  , category:"TV"     },
+                  {name:"Lenovo"  , price:3000  , category:"Laptop" },
+                  {name:"HP"      , price:5000  , category:"Laptop" },
+                  {name:"DELL"    , price:6000  , category:"Laptop" },
+                  {name:"HTC"     , price:2000  , category:"Phone"  },
+                  {name:"I_Phone" , price:13000 , category:"Phone"  },
+                  {name:"BenQ"    , price:1000  , category:"Screen" },
+                  {name:"DELL"    , price:1100  , category:"Screen" },
+                ]
+            
+            }
+     
+        3. Do Import class In file you use code in it
+
+            export class MyComponent2Component implements OnInit {
+
+                component1Products:megaProduct[]=[]
+
+                // - create var contactTable = new class from SharedService()
+            
+                // - this.contactProducts = contactTable.arrayProduct
+            
+                constructor() { 
+                
+                    let component1Table = new SharedService()
+                
+                    this.component1Products=component1Table.arrayProduct
+                }
+            
+                ngOnInit(): void {
+                }
+            }
+
+        Note: Decorator Of Service | @Injectable 
+
+
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    
+    - Notes:
+    
+    - package.json && package-lock.json files: as Cache log file, if you Share The Project folder with other, delete node_modules folder from project folder,
+      and after best the project in another PC open terminal and set this command | - NPM&#62;npm i | for install every thing from package.json file
+    
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+</pre>
+                        </h5>
+                    </div>
+
+                </div>
+
+                <!-- One Way Data Binding ------------------------------------------------------------------------------>
+
+                <section class="my-5 p-md-5 p-3 mega">
+                    <div class="btnDiv d-flex justify-content-start align-items-center">
+                        <button id="btn-1" class="border-0 bg-transparent text-danger fs-2 mb-0"
+                            onclick="changeScope(1)">&#62;&#62;&#62;</button>
+                        <label for="btn-1" style="cursor: pointer;">
+                            <h2 class="mb-0">* Binding : </h2>
+                        </label>
+                    </div>
+                
+                    <div id="button1" class="my-5 d-none">
+                
+                        <h2 class="text-center text-primary my-5"><span class="text-white">{</span> One Way Data Binding <span class="text-white">}</span></h2>
+
+                        <div class="row d-flex flex-wrap justify-content-around align-items-center py-3 my-3">
+                
+                            <div class="col-lg-6 text-center">
+
+                                <h2>home.component.ts </h2>
+
+                                <pre style="height: 500px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+                
+    import { Component, OnInit } from '@angular/core';
+
+    //-----------------------------------------------------------
+    
+    @Component({
+      selector: 'app-home',
+      templateUrl: './home.component.html',
+      styleUrls: ['./home.component.css']
+    })
+    export class HomeComponent implements OnInit {
+      
+      constructor(){}
+    
+      ngOnInit(): void {
+        
+      }
+    
+      //-----------------------------------------------------------
+    
+      carName:string = 'TOYOTA'
+      carType:string = 'EV 4X4'
+      imageUrl:string = "../assets/Images/Toyota.jpg"
+      carPrice:number = 700000
+    
+      themLight:string = "background-Color:white; color:black;"
+      themDark:string  = "background-Color:black; color:white;"
+      themToggle:boolean = false
+    
+      //-----------------------------------------------------------
+      
+      type(e:MouseEvent):void{
+    
+        window.alert( "Car" )
+    
+        console.log(e)
+        
+      }
+    
+      themHandle(e:MouseEvent){
+    
+        // if(this.themToggle == true){
+    
+        //   this.themToggle = false
+    
+        // }else{
+    
+        //   this.themToggle = true
+    
+        // }
+    
+        // this = All Variables in this sheet
+    
+        this.themToggle = !this.themToggle
+      }
+      
+    }    
+                
+</code>
+                                </pre>
+
+                            </div>
+                
+                            <div class="col-lg-6 text-center">
+                                <h2>home.component.html</h2>
+                                <pre style="height: 500px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+                    
+    &#60;div class=" bg-black my-5"&#62;
+
+        &#60;div class="container py-5"&#62;
+    
+          &#60;div class="row"&#62;
+    
+            &#60;div class="col-12 rounded-4"&#62;
+
+              &#60;h3 class="text-center text-light py-3"&#62;
+
+                &#60;i class="fa fa-home" aria-hidden="true"&#62;&#60;/i&#62;
+
+                Hello From Home
+
+                &#60;i class="fa fa-home" aria-hidden="true"&#62;&#60;/i&#62;
+
+              &#60;/h3&#62;
+
+            &#60;/div&#62;
+
+            &#60;!--Binding Variables-----------------------------------------------------------------------------------------------------&#62;
+
+            &#60;div id="MegaDiv" class="col-md-4 mx-auto py-5 my-2 text-center rounded-5 border border-5"
+              [style]=" themToggle ? themLight : themDark " [class]=" themToggle == true ? 'border-primary': 'border-light' "
+              [class.px-5]=" themToggle "&#62;
+
+              &#60;!-- ----------------------------------------- --&#62;
+              &#60;!-- Binding --&#62;
+              &#60;!-- ------- --&#62;
+
+              &#60;!-- One Way Data Binding (From TS to HTML) --&#62;
+
+              &#60;!-- Data Interpolation --&#62;
+              &#60;!-- Set Name of Var Between two {{}} --&#62;
+              &#60;div class="d-flex justify-content-center"&#62;
+                &#60;h3&#62;&#60;span class="text-light  me-2"&#62;{{carName}}&#60;/span&#62;&#60;/h3&#62;
+                &#60;h3&#62;&#60;span class="text-danger ms-2"&#62;{{carType}}&#60;/span&#62;&#60;/h3&#62;
+              &#60;/div&#62;
+
+              &#60;!-- Attributes Binding --&#62;
+              &#60;!-- Set Attributes Between [] and Set name of var between "" --&#62;
+              &#60;img [src]="imageUrl" class="w-100 my-3 rounded-2"&#62;
+
+              &#60;!-- Event Binding --&#62;
+              &#60;!-- Set Event between () and set name of function between "" --&#62;
+              &#60;!-- for get information about click set $event , and set e:MouseEvent in TS file --&#62;
+              &#60;button class="btn btn-danger my-2 d-block w-100 m-auto" (click)="type($event)"&#62;The Type&#60;/button&#62;
+
+              &#60;!-- For Make If Condition --&#62;
+              &#60;!-- [style.backgroundColor]=" Condition ? 'Action' : 'ElseAction' " --&#62;
+              &#60;!-- Note 1: Don't Set Space in If Condition Line --&#62;
+              &#60;!-- Notes2:
+                   - I have two option for set style class
+                       1. [style.backgroundColor]="black" 
+                       2. [style]="background-Color:black;" 
+                --&#62;
+              &#60;h1 class="w-100 my-3 py-2 m-auto text-center text-white"
+                [style.backgroundColor]=" carPrice &#62; 800000 ? '#DC3545' : 'green' "&#62; Price : {{carPrice}} &#60;/h1&#62;
+
+              &#60;!-- Example : Change Themes Mode Of #MegaDiv Div By Change Style and Class --&#62;
+              &#60;button class="btn btn-primary my-2 d-block w-25 m-auto" (click)="themHandle($event)"&#62;L/D Mode&#60;/button&#62;
+
+            &#60;/div&#62;
+
+            &#60;!--------------------------------------------------------------------------------------------------------------&#62;
+
+          &#60;/div&#62;
+    
+        &#60;/div&#62;
+  
+    &#60;/div&#62;
+                    
+</code>
+                                </pre>
+
+                            </div>
+                
+                            <div class="col-12 text-center my-4">
+
+                                <h2>Web View </h2>
+
+                                <div class="text-center border p-5 my-4 overflow-auto">
+                                    
+                                    <!--  -->
+                                    
+                                    <div class=" bg-black">
+
+                                        <div class="container">
+                                      
+                                          <div class="row">
+                                      
+                                            <div class="col-12 rounded-4">
+                                        
+                                              <h3 class="text-center text-light py-3">
+                                        
+                                                <i class="fa fa-home" aria-hidden="true"></i>
+                                        
+                                                Hello From Home
+                                        
+                                                <i class="fa fa-home" aria-hidden="true"></i>
+                                        
+                                              </h3>
+                                        
+                                            </div>
+                                        
+                                            <!--Binding Variables----------------------------------------------------------------------------------------------------->
+                                        
+                                            <div id="MegaDiv" class="col-md-6 mx-auto py-5 my-2 text-center rounded-5 border border-5"
+                                              [style]=" themToggle ? themLight : themDark " [class]=" themToggle == true ? 'border-primary': 'border-light' "
+                                              [class.px-5]=" themToggle ">
+                                        
+                                              <!-- ----------------------------------------- -->
+                                              <!-- Binding -->
+                                              <!-- ------- -->
+                                        
+                                              <!-- One Way Data Binding (From TS to HTML) -->
+                                        
+                                              <!-- Data Interpolation -->
+                                              <!-- Set Name of Var Between two {{}} -->
+                                              <div class="d-flex justify-content-center">
+                                                <h3><span class="text-light  me-2">TOYOTA</span></h3>
+                                                <h3><span class="text-danger ms-2">EV 4X4</span></h3>
+                                              </div>
+                                        
+                                              <!-- Attributes Binding -->
+                                              <!-- Set Attributes Between [] and Set name of var between "" -->
+                                              <img src="./../src/Images/Toyota.jpg" class="w-100 my-3 rounded-2">
+                                        
+                                              <!-- Event Binding -->
+                                              <!-- Set Event between () and set name of function between "" -->
+                                              <!-- for get information about click set $event , and set e:MouseEvent in TS file -->
+                                              <button class="btn btn-danger my-2 d-block w-100 m-auto" (click)="type($event)">The Type</button>
+                                        
+                                              <!-- For Make If Condition -->
+                                              <!-- [style.backgroundColor]=" Condition ? 'Action' : 'ElseAction' " -->
+                                              <!-- Note 1: Don't Set Space in If Condition Line -->
+                                              <!-- Notes2:
+                                                   - I have two option for set style class
+                                                       1. [style.backgroundColor]="black" 
+                                                       2. [style]="background-Color:black;" 
+                                                -->
+                                              <h1 class="w-100 my-3 py-2 m-auto text-center text-white"
+                                                [style.backgroundColor]=" carPrice > 800000 ? '#DC3545' : 'green' "> Price : 700000 </h1>
+                                        
+                                              <!-- Example : Change Themes Mode Of #MegaDiv Div By Change Style and Class -->
+                                              <button class="btn btn-primary my-2 d-block w-25 m-auto" (click)="themHandle($event)">L/D Mode</button>
+                                        
+                                            </div>
+                                        
+                                            <!-------------------------------------------------------------------------------------------------------------->
+                                        
+                                          </div>
+                                      
+                                        </div>
+                                      
+                                      </div>
+                                      
+                                    <!--  -->
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row d-flex flex-wrap justify-content-around align-items-center py-3 my-3">
+                
+                            <div class="col-lg-6 text-center">
+
+                                <h2>Gallery.component.ts </h2>
+
+                                <pre style="height: 500px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+                
+    import { Component, OnInit } from '@angular/core';
+
+    //-----------------------------------------------------------
+    
+    interface myProduct{
+      name:string,
+      type:string,
+      img:string,
+      color:string,
+      price:number,
+      availability:boolean,
+      details:Function,
+    }
+    
+    //-----------------------------------------------------------
+    
+    @Component({
+      selector: 'app-gallery',
+      templateUrl: './gallery.component.html',
+      styleUrls: ['./gallery.component.css']
+    })
+    export class GalleryComponent implements OnInit {
+    
+      constructor() { }
+    
+      ngOnInit(): void {
+      }
+    
+    
+      product:myProduct={
+    
+        // I Need To Make Interface product For Make Binding
+    
+        name:"I-Phone",
+        type:"14 Pro Max",
+        img:"../assets/Images/iPhone-14-Pro.jpg",
+        color:"Black / Gold",
+        price:14000,
+        availability:true,
+        details: ()=>{
+          window.alert(`Phone`)
+        }
+    
+      }
+    
+    }
+
+</code>
+                                </pre>
+
+                            </div>
+                
+                            <div class="col-lg-6 text-center">
+                                <h2>Gallery.component.html</h2>
+                                <pre style="height: 500px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+
+    &#60;div class=" bg-black my-5"&#62;
+
+        &#60;div class="container py-5"&#62;
+    
+          &#60;div class="row"&#62;
+    
+            &#60;div class="col-12 rounded-4"&#62;
+
+              &#60;h3 class="text-center text-light py-3"&#62;
+
+                &#60;i class="fa fa-home" aria-hidden="true"&#62;&#60;/i&#62;
+
+                Hello From Gallery
+
+                &#60;i class="fa fa-home" aria-hidden="true"&#62;&#60;/i&#62;
+
+              &#60;/h3&#62;
+
+            &#60;/div&#62;
+
+            &#60;!--Binding Object-----------------------------------------------------------------------------------------------------&#62;
+
+            &#60;div class="col-md-4 mx-auto py-5 my-2 text-center text-white rounded-5 border border-5"&#62;
+
+              &#60;!-- ----------------------------------------- --&#62;
+              &#60;!-- Binding --&#62;
+              &#60;!-- ------- --&#62;
+
+              &#60;!-- One Way Data Binding (From TS to HTML) --&#62;
+
+              &#60;!-- Data Interpolation --&#62;
+              &#60;!-- Set Name of Var Between two {{}} --&#62;
+              &#60;div class="d-flex justify-content-center"&#62;
+                &#60;h3&#62;&#60;span class="text-light  me-2"&#62;{{product.name}}&#60;/span&#62;&#60;/h3&#62;
+                &#60;h3&#62;&#60;span class="text-danger ms-2"&#62;{{product.type}}&#60;/span&#62;&#60;/h3&#62;
+              &#60;/div&#62;
+
+              &#60;h3 class="my-2 w-100 m-auto"&#62;{{product.color}}&#60;/h3&#62;
+
+              &#60;!-- Attributes Binding --&#62;
+              &#60;!-- Set Attributes Between [] and Set name of var between "" --&#62;
+              &#60;img [src]="product.img" class="w-100 my-5 rounded-2"&#62;
+
+              &#60;!-- Event Binding --&#62;
+              &#60;!-- Set Event between () and set name of function between "" --&#62;
+              &#60;!-- for get information about click set $event , and set e:MouseEvent in TS file --&#62;
+              &#60;button class="btn btn-danger my-2 d-block w-100 m-auto" (click)="product.details()"&#62;The Type&#60;/button&#62;
+
+              &#60;!-- For Make If Condition --&#62;
+              &#60;!-- [style.backgroundColor]=" Condition ? 'Action' : 'ElseAction' " --&#62;
+              &#60;!-- Note 1: Don't Set Space in If Condition Line --&#62;
+              &#60;!-- Notes2:
+                 - I have two option for set style class
+                     1. [style.backgroundColor]="black" 
+                     2. [style]="background-Color:black;" 
+              --&#62;
+              &#60;h1 class="w-100 my-3 py-2 m-auto text-center text-white"
+                [style.backgroundColor]=" product.price &#62; 10000 ? '#DC3545' : 'green' "&#62; Price : {{product.price}} &#60;/h1&#62;
+
+              &#60;h4 class="py-3" [class]=" product.availability ? 'bg-success': 'bg-danger' "&#62;Available : {{product.availability}}&#60;/h4&#62;    
+
+            &#60;/div&#62;
+
+            &#60;!--------------------------------------------------------------------------------------------------------------&#62;
+
+          &#60;/div&#62;
+    
+        &#60;/div&#62;
+    
+    &#60;/div&#62;
+                    
+</code>
+                                </pre>
+
+                            </div>
+                
+                            <div class="col-12 text-center my-4">
+
+                                <h2>Web View </h2>
+
+                                <div class="text-center border p-5 my-4 overflow-auto">
+                                    
+                                    <!--  -->
+                                    
+                                    <div class=" bg-black">
+
+                                        <div class="container">
+                                      
+                                          <div class="row">
+                                      
+                                            <div class="col-12 rounded-4">
+                                        
+                                              <h3 class="text-center text-light py-3">
+                                        
+                                                <i class="fa fa-home" aria-hidden="true"></i>
+                                        
+                                                Hello From Gallery
+                                        
+                                                <i class="fa fa-home" aria-hidden="true"></i>
+                                        
+                                              </h3>
+                                        
+                                            </div>
+                                        
+                                            <!--Binding Object----------------------------------------------------------------------------------------------------->
+                                    
+                                            <div class="col-md-6 mx-auto py-5 my-2 text-center text-white rounded-5 border border-5">
+                                        
+                                              <!-- ----------------------------------------- -->
+                                              <!-- Binding -->
+                                              <!-- ------- -->
+                                        
+                                              <!-- One Way Data Binding (From TS to HTML) -->
+                                        
+                                              <!-- Data Interpolation -->
+                                              <!-- Set Name of Var Between two {{}} -->
+                                              <div class="d-flex justify-content-center">
+                                                <h3><span class="text-light  me-2">I-Phone</span></h3>
+                                                <h3><span class="text-danger ms-2">14 Pro Max</span></h3>
+                                              </div>
+                                        
+                                              <h3 class="my-2 w-100 m-auto">Black / Gold</h3>
+                                    
+                                              <!-- Attributes Binding -->
+                                              <!-- Set Attributes Between [] and Set name of var between "" -->
+                                              <img src="./../src/Images/iPhone-14-Pro.jpg" class="w-100 my-5 rounded-2">
+                                        
+                                              <button class="btn btn-danger my-2 d-block w-100 m-auto" (click)="product.details()">The Type</button>
+                                        
+                                              <h1 class="w-100 my-3 py-2 m-auto text-center text-white"
+                                                [style.backgroundColor]=" product.price > 10000 ? '#DC3545' : 'green' "> Price : 14000 </h1>
+                                        
+                                              <h4 class="py-3" [class]=" product.availability ? 'bg-success': 'bg-danger' ">Available : True</h4>    
+                                        
+                                            </div>
+                                        
+                                            <!-------------------------------------------------------------------------------------------------------------->
+                                        
+                                          </div>
+                                      
+                                        </div>
+                                      
+                                    </div>
+       
+                                    <!--  -->
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row d-flex flex-wrap justify-content-around align-items-center py-3 my-3">
+                
+                            <div class="col-lg-6 text-center">
+
+                                <h2>About.component.ts </h2>
+
+                                <pre style="height: 500px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+                
+    import { Component, OnInit } from '@angular/core';
+
+    //-----------------------------------------------------------
+    
+    interface megaProduct {
+      name:string
+      price:number
+      category:string
+    }
+    
+    //-----------------------------------------------------------
+    
+    @Component({
+      selector: 'app-about',
+      templateUrl: './about.component.html',
+      styleUrls: ['./about.component.css']
+    })
+    export class AboutComponent implements OnInit {
+    
+      constructor() { }
+    
+      ngOnInit(): void {
+      }
+    
+      //--Directives-(*ngFor)------------------------------------------------------------------------------------------------------------------
+    
+      friends:string[] = ["Mohamed","Ahmed","Omar","Hagar","Aya"]
+    
+      arrayProduct:megaProduct[] = [
+    
+        {name:"Toshiba" , price:5000  , category:"TV"     },
+        {name:"Lenovo"  , price:3000  , category:"Laptop" },
+        {name:"HP"      , price:5000  , category:"Laptop" },
+        {name:"DELL"    , price:6000  , category:"Laptop" },
+        {name:"HTC"     , price:2000  , category:"Phone"  },
+        {name:"I_Phone" , price:13000 , category:"Phone"  },
+        {name:"BenQ"    , price:1000  , category:"Screen" },
+        {name:"DELL"    , price:1100  , category:"Screen" },
+    
+      ]
+    
+      //--------------------------------------------------------------------------------------------------------------------
+    
+      testName:string = "MEGA"
+    
+      testAge:number = 26
+    
+    }    
+
+</code>
+                                </pre>
+
+                            </div>
+                
+                            <div class="col-lg-6 text-center">
+                                <h2>About.component.html</h2>
+                                <pre style="height: 500px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+
+    &#60;div class=" bg-black my-5"&#62;
+
+        &#60;div class="container py-5"&#62;
+    
+          &#60;div class="row"&#62;
+    
+            &#60;div class="col-12 rounded-4"&#62;
+
+              &#60;h3 class="text-center text-light py-3"&#62;
+
+                &#60;i class="fa fa-home" aria-hidden="true"&#62;&#60;/i&#62;
+
+                Hello From About
+
+                &#60;i class="fa fa-home" aria-hidden="true"&#62;&#60;/i&#62;
+
+              &#60;/h3&#62;
+
+            &#60;/div&#62;
+
+            &#60;!--Binding Directives-----------------------------------------------------------------------------------------------------&#62;
+
+            &#60;div&#62;
+
+                &#60;!--Directives------------------------------------------------------------------------------------------&#62;
+
+                &#60;!-- Directives (Start By *) : It's Make Change in HTML     --&#62;
+                &#60;!-- 1.Attribute Directives : [ngClass]...[ngStyle]         --&#62;
+                &#60;!-- 2.Structure Directives : *ngFor...*ngIF...*ngSwitch    --&#62;
+                &#60;!-- 3.Component Directives : --&#62;
+
+                &#60;!--------------------------------------------------------------------------------------------&#62;
+                &#60;!-- 2.Structure Directives : *ngFor-----&#62;
+                &#60;!---------------------------------------&#62;
+
+                &#60;div class="row my-5 mx-auto border border-5 border-light rounded-4 d-flex flex-wrap align-items-center justify-content-center"&#62;
+                    &#60;div class="col-md-5 p-0"&#62;
+                        &#60;div class=" py-3 text-white text-center"&#62;
+                            &#60;h4&#62;For Loop (*ngFor) :&#60;/h4&#62;
+                        &#60;/div&#62;
+                    &#60;/div&#62;
+
+                    &#60;div class="col-md-7 p-0"&#62;
+                        &#60;div class="py-3 text-white"&#62;
+                            &#60;ul class="list-unstyled ps-0 m-0 d-flex flex-column flex-lg-row justify-content-center align-items-center"&#62;
+                                &#60;!-- 
+                                &#60;li&#62;{{friends[0]}}&#60;/li&#62;
+                                &#60;li&#62;{{friends[1]}}&#60;/li&#62;
+                                &#60;li&#62;{{friends[2]}}&#60;/li&#62;
+                                &#60;li&#62;{{friends[3]}}&#60;/li&#62; 
+                                --&#62;
+                                &#60;li class="mx-4" *ngFor="let i of friends"&#62;{{i}}&#60;/li&#62;
+                            &#60;/ul&#62;
+                        &#60;/div&#62;
+                    &#60;/div&#62;
+                &#60;/div&#62;
+
+                &#60;!--------------------------------------------------------------------------------------------&#62;
+
+                &#60;div class="text-center border border-5 border-light rounded-2  px-0 pt-2"&#62;
+
+                    &#60;table class="table mb-0"&#62;
+
+                      &#60;thead class="text-white border-bottom border-5 border-light"&#62;
+                          &#60;th class="pb-3"&#62;Index&#60;/th&#62;
+                          &#60;th class="pb-3"&#62;Category&#60;/th&#62;
+                          &#60;th class="pb-3"&#62;Name&#60;/th&#62;
+                          &#60;th class="pb-3"&#62;Price&#60;/th&#62;
+                      &#60;/thead&#62;
+
+                      &#60;tbody&#62;
+
+                        &#60;tr *ngFor="let product of arrayProduct; 
+                                    let rowI = index; 
+                                    let rowOdd = odd; 
+                                    let rowEven = even; 
+                                    let rowFirst = first; 
+                                    let rowLast = last;" 
+                                    [style.backgroundColor]="rowLast?'white' : rowEven?'lightblue':'aqua'"
+                                    [class]=" rowFirst ? 'bg-white' : '' "&#62;
+
+
+
+                          &#60;td&#62;{{rowI+1}}&#60;/td&#62;
+                          &#60;td&#62;{{product.category}}&#60;/td&#62;
+                          &#60;td&#62;{{product.name}}&#60;/td&#62;
+                          &#60;td&#62;{{product.price}}&#60;/td&#62;
+
+                        &#60;/tr&#62;
+
+                      &#60;/tbody&#62;
+
+                    &#60;/table&#62;
+
+                &#60;/div&#62;
+
+                &#60;!--------------------------------------------------------------------------------------------&#62;
+                &#60;!-- 2.Structure Directives : *ngIF / *ngSwitch-----&#62;
+                &#60;!--------------------------------------------------&#62;
+
+                &#60;!-- In This Case I Want Hidden Element Based On Condition --&#62;
+
+                &#60;!-- I Have 3 Solution for Make Condition--------------------&#62;
+
+                &#60;div class="text-white text-center border border-5 border-light rounded-3 my-5 py-5"&#62;
+                    &#60;h4 class="my-5"&#62; Name : MEGA  |  Age : 26 &#60;/h4&#62;
+                    &#60;h4 class="my-5"&#62; Condition : If Age &#60; 30 | Display The Name &#60;/h4&#62;
+
+                    &#60;!--------------------------------------------------------------------------------------------&#62;
+
+                    &#60;!-- 1.Attribute Directives : [ngClass] -----------&#62;
+                    &#60;div class="w-75 mx-auto text-white border border-5 border-light my-5 py-5"&#62;
+                        &#60;h4&#62;Class [ngClass]&#60;/h4&#62;
+                        &#60;h1 [class.d-none]=" testAge &#62; 30 "&#62;{{testName}}&#60;/h1&#62;
+                    &#60;/div&#62;
+
+                    &#60;!--------------------------------------------------------------------------------------------&#62;
+
+                    &#60;!-- 2.Structure Directives : *ngIF ---------&#62;
+                    &#60;div class="w-75 mx-auto text-white border border-5 border-light my-5 py-5"&#62;
+                        &#60;h4&#62;IF Condition (*ngIF)&#60;/h4&#62;
+                        &#60;h1 *ngIf=" testAge &#60; 30 "&#62;{{testName}}&#60;/h1&#62;
+                    &#60;/div&#62;
+
+                    &#60;!--------------------------------------------------------------------------------------------&#62;
+
+                    &#60;!-- 3.Structure Directives : *ngSwitch -----&#62;
+                    &#60;div [ngSwitch]=" testAge &#60; 30 " class="w-75 mx-auto text-white border border-5 border-light my-5 py-5"&#62;
+                        &#60;h4&#62;Switch (*ngSwitch)&#60;/h4&#62;
+                        &#60;div *ngSwitchCase="true"&#62;
+                            &#60;h1&#62;{{testName}}&#60;/h1&#62;
+                        &#60;/div&#62;
+
+                        &#60;div *ngSwitchDefault&#62;
+                            &#60;h1&#62;Condition False&#60;/h1&#62;
+                        &#60;/div&#62;
+                    &#60;/div&#62;
+
+                    &#60;!--------------------------------------------------------------------------------------------&#62;
+
+                    &#60;!-- Notes --&#62;
+                    &#60;!-- Structure Directives -&#62; *ngIF      : The HTML File Not Included Of This Element --&#62;
+                    &#60;!-- Attribute Directives -&#62; [ngClass]  : The HTML File Included This Element But The Element Take class = "d-none"  --&#62;
+
+                    &#60;!--------------------------------------------------------------------------------------------&#62;
+
+                    &#60;!-- If I Want Apply The Same Condition on More Than One Element, I Have 2 Solution --&#62;
+
+                    &#60;!-- 1. Set All Elements In Div, and Set The Condition The Div --&#62;
+                    &#60;!------But In This Case I Create Div Unnecessarily -------------&#62;
+
+                    &#60;!-- 2. Set All Elements In &#60;ng-template&#62;, and Set The Condition The Template -----------------------&#62;
+                    &#60;!------In This Case I Apply Condition on All Element Without Create New Element---------------------&#62;
+                    &#60;!------And I Can Create The Template and Set Template Name, For Use with *ngIf in Condition Else----&#62;
+
+                    &#60;div class="w-75 mx-auto text-white border border-5 border-light my-5 py-5"&#62;
+                        &#60;h4 class="py-3"&#62; Template [ngIf]&#60;/h4&#62;
+                        &#60;ng-template [ngIf]=" testAge &#60; 30 "&#62;
+                            &#60;h1&#62;{{testName}}&#60;/h1&#62;
+                            &#60;h1&#62;{{testAge}}&#60;/h1&#62;
+                        &#60;/ng-template&#62;
+                    &#60;/div&#62;
+
+                    &#60;!-- Else Condition------------------------------------------------------------------------------------------&#62;
+                    &#60;!-- In This Case If Condition Else Display Another Template --&#62;
+
+                    &#60;div class="w-75 mx-auto text-white border border-5 border-light my-5 py-5"&#62;
+                        &#60;h4 class="py-5"&#62;(*ngIf) Else : Display Template&#60;/h4&#62;
+
+                        &#60;ng-template *ngIf=" testAge &#62; 30 ; else megaTemplate "&#62;
+                            &#60;h1&#62;{{testName}}&#60;/h1&#62;
+                            &#60;h1&#62;{{testAge}}&#60;/h1&#62;
+                        &#60;/ng-template&#62;
+
+                        &#60;ng-template #megaTemplate&#62;
+                            &#60;div class="w-75 mx-auto text-white py-2"&#62;
+                                &#60;h4&#62;Condition False | (Age &#62; 30)&#60;/h4&#62;
+                            &#60;/div&#62;
+                        &#60;/ng-template&#62;
+
+                    &#60;/div&#62;
+
+                    &#60;!--------------------------------------------------------------------------------------------------------------&#62;
+
+                &#60;/div&#62;
+
+            &#60;/div&#62;
+
+            &#60;!--------------------------------------------------------------------------------------------------------------&#62;
+
+          &#60;/div&#62;
+    
+        &#60;/div&#62;
+    
+    &#60;/div&#62;
+                    
+</code>
+                                </pre>
+
+                            </div>
+                
+                            <div class="col-12 text-center my-4">
+
+                                <h2>Web View </h2>
+
+                                <div class="text-center border p-5 my-4 overflow-auto">
+                                    
+                                    <!--  -->
+                                    
+                                    <div class=" bg-black">
+
+                                        <div class="container">
+                                      
+                                          <div class="row">
+                                      
+                                            <div class="col-12 rounded-4">
+                                        
+                                              <h3 class="text-center text-light py-3">
+                                        
+                                                <i class="fa fa-home" aria-hidden="true"></i>
+                                        
+                                                Hello From About
+                                        
+                                                <i class="fa fa-home" aria-hidden="true"></i>
+                                        
+                                              </h3>
+                                        
+                                            </div>
+                                                                            
+                                            <div>
+                                  
+                                                <div class="row my-5 mx-auto border border-5 border-light rounded-4 d-flex flex-wrap align-items-center justify-content-center">
+                                                    <div class="col-md-5 p-0">
+                                                        <div class=" py-3 text-white text-center">
+                                                            <h4>For Loop (*ngFor) :</h4>
+                                                        </div>
+                                                    </div>
+                                        
+                                                    <div class="col-md-7 p-0">
+                                                        <div class="py-3 text-white">
+                                                            <ul class="list-unstyled ps-0 m-0 d-flex flex-column flex-lg-row justify-content-center align-items-center">
+                                                                <li class="mx-4" *ngFor="let i of friends">Mohamed</li>
+                                                                <li class="mx-4" *ngFor="let i of friends">Ahmed</li>
+                                                                <li class="mx-4" *ngFor="let i of friends">Omar</li>
+                                                                <li class="mx-4" *ngFor="let i of friends">Hagar</li>
+                                                                <li class="mx-4" *ngFor="let i of friends">Aya</li> 
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        
+                                        
+                                                <div class="text-center border border-5 border-light rounded-2  px-0 pt-2">
+                                          
+                                                  <table class="table mb-0">
+                                                    <thead class="text-white border-bottom border-5 border-light">
+                                                      <th class="pb-3">Index</th>
+                                                      <th class="pb-3">Category</th>
+                                                      <th class="pb-3">Name</th>
+                                                      <th class="pb-3">Price</th>
+                                                      </thead>
+                                                      <tbody>
+                                                        <tr class="bg-white" style="background-color: lightblue;">
+                                                          <td>1</td>
+                                                          <td>TV</td>
+                                                          <td>Toshiba</td>
+                                                          <td>5000</td>
+                                                        </tr>
+                                                        <tr style="background-color: aqua;">
+                                                          <td>2</td>
+                                                          <td>Laptop</td>
+                                                          <td>Lenovo</td>
+                                                          <td>3000</td>
+                                                        </tr>
+                                                        <tr style="background-color: lightblue;">
+                                                          <td>3</td>
+                                                          <td>Laptop</td>
+                                                          <td>HP</td>
+                                                          <td>5000</td>
+                                                        </tr>
+                                                        <tr style="background-color: aqua;">
+                                                          <td>4</td>
+                                                          <td>Laptop</td>
+                                                          <td>DELL</td>
+                                                          <td>6000</td>
+                                                        </tr>
+                                                        <tr style="background-color: lightblue;">
+                                                          <td>5</td>
+                                                          <td>Phone</td>
+                                                          <td>HTC</td>
+                                                          <td>2000</td>
+                                                        </tr>
+                                                        <tr style="background-color: aqua;">
+                                                          <td>6</td>
+                                                          <td>Phone</td>
+                                                          <td>I_Phone</td>
+                                                          <td>13000</td>
+                                                        </tr>
+                                                        <tr style="background-color: lightblue;">
+                                                          <td>7</td>
+                                                          <td>Screen</td>
+                                                          <td>BenQ</td>
+                                                          <td>1000</td>
+                                                        </tr>
+                                                        <tr style="background-color: white;">
+                                                          <td>8</td>
+                                                          <td>Screen</td>
+                                                          <td>DELL</td>
+                                                          <td>1100</td>
+                                                        </tr>
+                                                      </tbody>
+                                                  </table>
+                                    
+                                                </div>
+                                                
+                                    
+                                                <div class="text-white text-center border border-5 border-light rounded-3 my-5 py-5">
+                                                    <h4 class="my-5"> Name : MEGA  |  Age : 26 </h4>
+                                                    <h4 class="my-5"> Condition : If Age &#60; 30 | Display The Name </h4>
+                                                        
+                                    
+                                                    <!-- 1.Attribute Directives : [ngClass] ----------->
+                                                    <div class="w-75 mx-auto text-white border border-5 border-light my-5 py-5">
+                                                        <h4>Class [ngClass]</h4>
+                                                        <h1 [class.d-none]=" testAge > 30 ">MEGA</h1>
+                                                    </div>
+                                    
+                                    
+                                                    <!-- 2.Structure Directives : *ngIF --------->
+                                                    <div class="w-75 mx-auto text-white border border-5 border-light my-5 py-5">
+                                                        <h4>IF Condition (*ngIF)</h4>
+                                                        <h1 *ngIf=" testAge < 30 ">MEGA</h1>
+                                                    </div>
+                                        
+                                                    
+                                    
+                                                    <!-- 3.Structure Directives : *ngSwitch ----->
+                                                    <div [ngSwitch]=" testAge < 30 " class="w-75 mx-auto text-white border border-5 border-light my-5 py-5">
+                                                        <h4>Switch (*ngSwitch)</h4>
+                                                        <h1>MEGA</h1>
+                                                    </div>
+                                        
+                                        
+                                                    <div class="w-75 mx-auto text-white border border-5 border-light my-5 py-5">
+                                                        <h4 class="py-3"> Template [ngIf]</h4>
+                                                        <ng-template [ngIf]=" testAge < 30 ">
+                                                            <h1>MEGA</h1>
+                                                            <h1>26</h1>
+                                                        </ng-template>
+                                                    </div>
+                                        
+                                                    <!-- Else Condition------------------------------------------------------------------------------------------>
+                                                    <!-- In This Case If Condition Else Display Another Template -->
+                                                    
+                                                    <div class="w-75 mx-auto text-white border border-5 border-light my-5 py-5">
+                                                        <h4 class="py-5">(*ngIf) Else : Display Template</h4>
+                                                        
+
+                                    
+                                                        <ng-template #megaTemplate>
+                                                            <div class="w-75 mx-auto text-white py-2">
+                                                                <h4>Condition False | (Age &#62; 30)</h4>
+                                                            </div>
+                                                        </ng-template>
+                                    
+                                                    </div>
+                                        
+                                                    <!-------------------------------------------------------------------------------------------------------------->
+                                    
+                                                </div>
+                                        
+                                            </div>
+                                        
+                                            <!-------------------------------------------------------------------------------------------------------------->
+                                        
+                                          </div>
+                                      
+                                        </div>
+                                      
+                                    </div>
+                                    
+                                    <!--  -->
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <h2 class="text-center text-primary my-5"><span class="text-white">{</span> Tow Way Data Binding <span class="text-white">}</span></h2>
+
+                        <div class="row d-flex flex-wrap justify-content-around align-items-center py-3 my-3">
+                
+                            <div class="col-lg-6 text-center">
+
+                                <h2>Contact.component.ts </h2>
+
+                                <pre style="height: 500px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+                
+    import { Component, OnInit } from '@angular/core';
+
+    //-----------------------------------------------------------
+    
+    @Component({
+      selector: 'app-contact',
+      templateUrl: './contact.component.html',
+      styleUrls: ['./contact.component.css']
+    })
+    export class ContactComponent implements OnInit {
+    
+      constructor() {}
+    
+      ngOnInit(): void {}
+    
+      megaManUserName:string = ""
+    
+      //-------------------------------------------------------------------
+      // Binding / The First Solution
+      // -----------------------------
+    
+      // changeName(e:any):void{
+    
+      //   console.log(e.target.value);
+    
+      //   this.megaManUserName = e.target.value
+        
+      // }
+    
+    
+      //-------------------------------------------------------------------
+      // Binding / The Second Solution
+      // ------------------------------
+    
+      // Go To app.module.ts | imports [], For import builtin angler module
+      
+      // Make set FormsModule, in imports [] and change (keyup)="changeName($event)" by [(ngModel)]="megaManUserName" in HTML   
+    
+    }
+        
+</code>
+                                </pre>
+
+                            </div>
+                
+                            <div class="col-lg-6 text-center">
+                                <h2>Contact.component.html</h2>
+                                <pre style="height: 500px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+
+    &#60;h3 class="text-center text-light bg-black py-4 my-4"&#62;
+        &#60;i class="fa fa-contact-card" aria-hidden="true"&#62;&#60;/i&#62;
+        Hello From Contact
+        &#60;i class="fa fa-contact-card" aria-hidden="true"&#62;&#60;/i&#62;
+    &#60;/h3&#62;
+  
+  
+    &#60;!----------------------------------------------------&#62;
+    &#60;!-- Binding --&#62;
+    &#60;!-- ------- --&#62;
+    &#60;!-- Two Way Data Binding (From HTML to TS to HTML) --&#62;
+    &#60;!----------------------------------------------------&#62;
+  
+    &#60;div class="bg-dark text-center text-white bg-dark p-5"&#62;
+  
+        &#60;!--------------------------------------------------------------------------&#62;
+        &#60;!-- The First Solution --&#62;
+        &#60;!------------------------&#62;
+    
+        &#60;!-- 
+        &#60;div class="container text-center text-white bg-dark py-5"&#62;
+    
+            &#60;h1&#62; My Name : &#60;span class="text-primary"&#62;{{megaManUserName}}&#60;/span&#62; &#60;/h1&#62;
+    
+            &#60;input (keyup)="changeName($event)" class="form-control w-50 mx-auto mt-5" type="text"&#62;
+    
+        &#60;/div&#62; 
+        --&#62;
+    
+    
+        &#60;!--------------------------------------------------------------------------&#62;
+        &#60;!-- The Second Solution --&#62;
+        &#60;!-------------------------&#62;
+    
+        &#60;!-- 
+            - Go To app.module.ts | imports [], For import builtin angler module
+            - Make set FormsModule, in imports [] and change (keyup)="changeName($event)" by [(ngModel)]="megaManUserName" in HTML  
+         --&#62;
+    
+        &#60;div&#62;
+    
+            &#60;h1 class="text-start"&#62; Customer Name : &#60;span class="text-primary"&#62;{{megaManUserName}}&#60;/span&#62; &#60;/h1&#62;
+    
+            &#60;input [(ngModel)]="megaManUserName" placeholder="Full Name" class="form-control w-100 mx-auto mt-5" type="text"&#62;
+
+            &#60;!-- I Can Use it in Search --&#62;
+    
+        &#60;/div&#62;
+  
+    &#60;/div&#62; 
+                  
+</code>
+                                </pre>
+
+                            </div>
+                
+                            <div class="col-12 text-center my-4">
+
+                                <h2>app.module.ts </h2>
+
+                                <div class="text-start border p-5 my-4 overflow-auto">
+                                    
+                                    <pre style="height: 500px;">
+<code>
+
+    import { NgModule } from '@angular/core';
+    import { BrowserModule } from '@angular/platform-browser';
+    
+    import { AppRoutingModule } from './app-routing.module';
+    import { AppComponent } from './app.component';
+    import { HomeComponent } from './home/home.component';
+    import { GalleryComponent } from './gallery/gallery.component';
+
+    
+    @NgModule({
+      declarations: [
+        AppComponent,
+        HomeComponent,
+        GalleryComponent,  
+      ],
+      imports: [
+        BrowserModule,
+        AppRoutingModule,
+    //-------------------
+        FormsModule
+    //-------------------
+      ],
+      providers: [],
+      bootstrap: [AppComponent]
+    })
+    export class AppModule { }
+
+</code>
+                                    </pre>
+                                    
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                
+                </section>
+
+                <!-- Routing ------------------------------------------------------------------------------>
+
+                <section class="my-5 p-md-5 p-3 mega">
+                    <div class="btnDiv d-flex justify-content-start align-items-center">
+                        <button id="btn-2" class="border-0 bg-transparent text-danger fs-2 mb-0"
+                            onclick="changeScope(2)">&#62;&#62;&#62;</button>
+                        <label for="btn-2" style="cursor: pointer;">
+                            <h2 class="mb-0">* Routing : </h2>
+                        </label>
+                    </div>
+                
+                    <div id="button2" class="my-5 d-none">
+                
+                        <div class="row d-flex flex-wrap justify-content-around align-items-center py-3 my-3">
+                
+                            <div class="col-12 text-center mb-4">
+
+                                <h2>app-routing.module.ts</h2>
+
+                                <div class="text-start border p-5 my-4 overflow-auto">
+                                    
+                                    <pre style="height: 500px;">
+<code>
+
+    import { NgModule             } from '@angular/core';
+    import { RouterModule, Routes } from '@angular/router';
+    import { HomeComponent        } from './home/home.component';
+    import { GalleryComponent     } from './gallery/gallery.component';
+    import { AboutComponent       } from './about/about.component';
+    import { ApplicationComponent } from './application/application.component';
+    import { ContactComponent     } from './contact/contact.component';
+    import { MoviesComponent      } from './movies/movies.component';
+    import { ParentComponent      } from './parent/parent.component';
+    import { ChildComponent       } from './child/child.component';
+    import { ProfileComponent     } from './profile/profile.component';
+    import { SettingComponent     } from './setting/setting.component';
+    import { NotFoundComponent    } from './not-found/not-found.component';
+
+    //--------------------------------------------------------------------------------------------
+
+    const routes: Routes = [
+
+      // Title : For Change Page Title In Tap
+      //--------------------------------------------------------------------------
+
+      {path:"home"    , component: HomeComponent    , title:"Home"},
+      {path:"about"   , component: AboutComponent   , title:"About"},
+      {path:"movies"  , component: MoviesComponent  , title:"Movies"},
+      {path:"contact" , component: ContactComponent , title:"Contact"},
+      {path:"gallery" , component: GalleryComponent , title:"Gallery"},
+
+      // For Create Sub link (Child) From Main Link (Parent)
+    
+      {path:"parent", component: ParentComponent, title:"Parent",children:[
+
+        {path:"child", component: ChildComponent, title:"Child"},
+
+      ]},
+
+      // For Create Sub link (Profile/App) From Main Link (Setting)
+
+      {path:"setting", component: SettingComponent, title:"Setting",children:[
+
+        {path:"profile"     , component: ProfileComponent     , title:"Sett-Profile"},
+        {path:"application" , component: ApplicationComponent , title:"Sett-App"    },
+
+        // 1. After This Step Set Router Selector &#60;router-outlet&#62;&#60;/router-outlet&#62; In setting.component.html
+        //    For Dynamic Change Selector Based On URL/Path
+
+        // 2. Set | routerLink="'profile'" routerLinkActive="pageActive" | For Every (a) Anchor In SETTING.component.html
+        //    routerLink="'profile'" | For Add Profile to Path Of URL (URL/setting/profile) OnClick Without Refresh
+        //    routerLinkActive="pageActive" | For Make Page Logged To It is Active
+
+        // 3. Make Class .pageActive{} in Setting.component.css 
+        /*
+              .myActive{
+
+                background-color: #DC3545;
+
+                color: white;
+
+              }
+        */
+
+        // {path:"/profile", component: ProfileComponent, title:"Sett-Profile"}
+        // If I Set / Before Profile, It Will Delete All Path and Start From Profile (URL/Profile) 404
+
+      ]},
+
+      // For Redirect To Home If Path After URL = None
+      // pathMatch:'full'   : Do Redirect To Path = home
+      // pathMatch:'prefix' : Do Redirect To First Next Path Start By home | 
+
+      {path:"", redirectTo:'home', pathMatch:'full'},
+
+      // This Condition = Any Other Path Redirect To NotFound Page
+      // If I Set This Line in The Top All Page Redirect = Not Found Page
+
+      {path:"**", component: NotFoundComponent, title:"404"},
+
+    ];
+
+    // 1. After This Step Set Router Selector &#60;router-outlet&#62;&#60;/router-outlet&#62; In app.component.html
+    //    For Dynamic Change Selector Based On URL/Path
+
+    // 2. Set | [routerLink]="'home'" routerLinkActive="pageActive" | For Every (a) Anchor In navbar.component.html
+    //    [routerLink]="'home'" | For Change Path Of URL OnClick Without Refresh
+    //    routerLinkActive="pageActive" | For Make Page Logged To It is Active
+
+    // 3. Make Class .pageActive{} in navbar.component.css 
+    /*
+          .myActive{
+
+            background-color: #DC3545;
+
+            color: white;
+
+          }
+    */
+
+    @NgModule({
+      imports: [RouterModule.forRoot(routes)],
+      exports: [RouterModule]
+    })
+    export class AppRoutingModule { }
+
+</code>
+                                    </pre>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-6 text-center">
+
+                                <h2>app.component.ts </h2>
+
+                                <pre style="height: 500px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+                
+    import { Component } from '@angular/core';
+
+    @Component({
+    
+      selector: 'app-root',
+      templateUrl: './app.component.html',
+      styleUrls: ['./app.component.css']
+      
+    })
+    export class AppComponent {
+    
+      title = 'App2';
+    
+    }
+
+</code>
+                                </pre>
+
+                            </div>
+                
+                            <div class="col-lg-6 text-center">
+                                <h2>app.component.html</h2>
+                                <pre style="height: 500px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+
+    &#60;!-------------------------------------------------------------------&#62;
+    &#60;!-- Navbar Component Selector --&#62;
+    &#60;!-------------------------------&#62;
+
+    &#60;app-navbar&#62;&#60;/app-navbar&#62;
+
+    &#60;!-------------------------------------------------------------------&#62;
+    &#60;!-- Dynamic Selector ---------------------------&#62;
+    &#60;!-- Dynamic Change Selector Based On URL/Path --&#62;
+    &#60;!-----------------------------------------------&#62;
+
+    &#60;router-outlet&#62;&#60;/router-outlet&#62;
+
+    &#60;!-------------------------------------------------------------------&#62;
+    &#60;!-- Footer Component Selector --&#62;
+    &#60;!-------------------------------&#62;
+
+    &#60;app-footer&#62;&#60;/app-footer&#62;
+
+    &#60;!-------------------------------------------------------------------&#62;
+                    
+</code>
+                                </pre>
+
+                            </div>
+
+                            <div class="col-lg-6 text-center">
+
+                                <h2>navbar.component.css</h2>
+
+                                <pre style="height: 500px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+                
+    .myActive{
+
+        background-color: #DC3545;
+    
+        color: white;
+        
+    }
+
+</code>
+                                </pre>
+
+                            </div>
+                
+                            <div class="col-lg-6 text-center">
+                                <h2>navbar.component.html</h2>
+                                <pre style="height: 500px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+
+    &#60;nav class="navbar navbar-expand-lg bg-dark navbar-dark"&#62;
+
+        &#60;div class="container"&#62;
+
+          &#60;a class="navbar-brand" href="#"&#62;Navbar&#60;/a&#62;
+
+          &#60;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"&#62;
+            &#60;span class="navbar-toggler-icon"&#62;&#60;/span&#62;
+          &#60;/button&#62;
+
+          &#60;div class="collapse navbar-collapse" id="navbarSupportedContent"&#62;
+
+            &#60;ul class="navbar-nav ms-auto mb-2 mb-lg-0"&#62;
+
+              &#60;!-- delete href because it's make refresh  --&#62;
+              &#60;!-- replaced href by router-link and set the same name in app-routing.module --&#62;
+              &#60;!-- and set routerLinkActive="myActive" and go to navbar.css and select myActive class and change background --&#62;
+
+              &#60;li class="nav-item"&#62;
+                &#60;a class="nav-link" [routerLink]="'home'" routerLinkActive="myActive"&#62;Home&#60;/a&#62;
+              &#60;/li&#62;
+
+              &#60;li class="nav-item"&#62;
+                &#60;a class="nav-link" [routerLink]="'gallery'" routerLinkActive="myActive"&#62;Gallery&#60;/a&#62;
+              &#60;/li&#62;
+
+              &#60;li class="nav-item"&#62;
+                &#60;a class="nav-link" [routerLink]="'about'" routerLinkActive="myActive"&#62;About&#60;/a&#62;
+              &#60;/li&#62;
+
+              &#60;li class="nav-item"&#62;
+                &#60;a class="nav-link" [routerLink]="'setting'" routerLinkActive="myActive"&#62;Setting&#60;/a&#62;
+              &#60;/li&#62;
+
+            &#60;/ul&#62;
+
+          &#60;/div&#62;
+
+        &#60;/div&#62;
+
+    &#60;/nav&#62;
+
+                    
+</code>
+                                </pre>
+
+                            </div>
+                
+                            <div class="col-lg-6 text-center">
+
+                                <h2>parent.component.css</h2>
+
+                                <pre style="height: 500px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+                
+    .myActive{
+
+        background-color: #DC3545;
+    
+        color: white;
+        
+    }
+
+</code>
+                                </pre>
+
+                            </div>
+                
+                            <div class="col-lg-6 text-center">
+                                <h2>parent.component.html</h2>
+                                <pre style="height: 500px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+
+    &#60;div class="text-center text-light bg-black py-4 my-4"&#62;
+
+        &#60;a routerLink="/parent" class="text-decoration-none text-light"&#62;
+
+          &#60;h2&#62;
+            &#60;i class="fa-solid fa-laptop-code"&#62;&#60;/i&#62;
+            Hello From Parent
+            &#60;i class="fa-solid fa-laptop-code"&#62;&#60;/i&#62;
+          &#60;/h2&#62;
+
+        &#60;/a&#62;
+    
+        &#60;div class="my-5"&#62;
+
+          &#60;div class="text-center text-light bg-primary py-4"&#62;
+
+            &#60;p class="fs-4 py-3"&#62;The Child Selector In Parent Component.HTML&#60;/p&#62;
+
+          &#60;/div&#62;
+
+        &#60;/div&#62;
+    
+        &#60;div class="bg-black"&#62;
+
+                &#60;a routerLink="child" class="text-decoration-none text-light"&#62;
+
+                &#60;h3 class="text-center text-light bg-black py-3" routerLinkActive="myActive"&#62;
+
+                    &#60;i class="fa fa-laptop" aria-hidden="true"&#62;&#60;/i&#62;
+                    Hello From Child
+                    &#60;i class="fa fa-laptop" aria-hidden="true"&#62;&#60;/i&#62;
+
+                &#60;/h3&#62;
+
+              &#60;/a&#62;
+
+        &#60;/div&#62;
+
+        &#60;div class="text-light text-center bg-black my-2  d-flex justify-content-around align-items-center"&#62;
+
+                &#60;div class="w-75"&#62;
+
+                    &#60;router-outlet&#62;&#60;/router-outlet&#62;
+
+                &#60;/div&#62;
+    
+        &#60;/div&#62;
+
+    &#60;/div&#62;
+
+                    
+</code>
+                                </pre>
+
+                            </div>
+
+                        </div>
+                
+                    </div>
+                
+                </section>
+
+                <!-- Sharing Data ------------------------------------------------------------------------------>
+
+                <section class="my-5 p-md-5 p-3 mega">
+                    <div class="btnDiv d-flex justify-content-start align-items-center">
+                        <button id="btn-3" class="border-0 bg-transparent text-danger fs-2 mb-0"
+                            onclick="changeScope(3)">&#62;&#62;&#62;</button>
+                        <label for="btn-3" style="cursor: pointer;">
+                            <h2 class="mb-0">* Sharing Data :</h2>
+                        </label>
+                    </div>
+                
+                    <div id="button3" class="my-5 d-none">
+                
+                        <div class="row d-flex flex-wrap justify-content-around align-items-center py-3 my-3">
+                
+                            <div class="col-12 text-center mb-4">
+
+                                <h2>shared.service.ts</h2>
+
+                                <div class="text-start border p-5 my-4 overflow-auto">
+                                    
+                                    <pre style="height: 500px;">
+<code>
+
+    import { Injectable } from '@angular/core';
+
+    //------------------------------------------------------
+    
+    export interface megaProduct {
+      name:string
+      price:number
+      category:string
+    }
+    
+    //------------------------------------------------------
+    
+    @Injectable({
+    
+      // providedIn: 'root': All Components Show this file service
+    
+      providedIn: 'root'
+    
+      //---------------------------------------------------------
+    
+      // if i want show this file in home.Component only
+    
+      // delete providedIn: 'root' from this file
+    
+      // go to home.component.ts and set the next code
+    
+      /*
+      
+      @Component({
+        selector: 'app-home',
+        templateUrl: './home.component.html',
+        styleUrls: ['./home.component.css'],
+        providers: [SharedService]
+      })
+    
+      */
+    
+      // in this case if i change or add object in array, didn't change in this file
+    
+      //---------------------------------------------------------
+    
+      // i can delete (providedIn: 'root') and set in app.module.ts in providers:[SharedService]
+      
+      // in this case all component modules in app.module.ts show this service
+    
+    })
+    export class SharedService {
+    
+      constructor() {}
+    
+      //------------------------------------------------------
+    
+      arrayProduct:megaProduct[] = [
+        {name:"Toshiba" , price:5000  , category:"TV"     },
+        {name:"Lenovo"  , price:3000  , category:"Laptop" },
+        {name:"HP"      , price:5000  , category:"Laptop" },
+        {name:"DELL"    , price:6000  , category:"Laptop" },
+        {name:"HTC"     , price:2000  , category:"Phone"  },
+        {name:"I_Phone" , price:13000 , category:"Phone"  },
+        {name:"BenQ"    , price:1000  , category:"Screen" },
+        {name:"DELL"    , price:1100  , category:"Screen" },
+      ]
+    
+    }    
+
+</code>
+                                    </pre>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-6 text-center">
+
+                                <h2>my-comp1.component.ts</h2>
+
+                                <pre style="height: 500px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+                
+    import { Component, OnInit } from '@angular/core';
+    import { SharedService, megaProduct , } from '../shared.service';
+    
+    //-----------------------------------------------------------
+    
+    export interface megaManProduct{
+      name:string,
+      type:string,
+      img:string,
+      color:string,
+      price:number,
+      availability:boolean,
+      details:Function,
+    }
+    
+    //-----------------------------------------------------------
+    
+    @Component({
+      selector: 'app-my-component1',
+      templateUrl: './my-component1.component.html',
+      styleUrls: ['./my-component1.component.css']
+    })
+    export class MyComponent1Component implements OnInit {
+    
+      // -----------------------------------------------------------
+      // Share Data Between Component Via Selector 
+      // ------------------------------------------
+    
+      megaManUserName:string = "Magdy"
+    
+      megaManProduct:megaManProduct={
+        name:"I-Phone",
+        type:"14 Pro Max",
+        img:"../assets/Images/iPhone-14-Pro.jpg",
+        color:"Black / Gold",
+        price:14000,
+        availability:true,
+        details: ()=>{
+          window.alert(`Phone`)
+        }
+      }
+      
+      //-------------------------------------------------------------------
+      // Share Data Between Component Via Service
+      //-------------------------------------------
+    
+      // - I Will Create Service Via CLI >> ng g s shared
+    
+      // - Remove shared code from two TS files and set in shared.service.ts
+      /*
+      arrayProduct:megaProduct[] = [
+        {name:"Toshiba" , price:5000  , category:"TV"     },
+        {name:"Lenovo"  , price:3000  , category:"Laptop" },
+        {name:"HP"      , price:5000  , category:"Laptop" },
+        {name:"DELL"    , price:6000  , category:"Laptop" },
+        {name:"HTC"     , price:2000  , category:"Phone"  },
+        {name:"I_Phone" , price:13000 , category:"Phone"  },
+        {name:"BenQ"    , price:1000  , category:"Screen" },
+        {name:"DELL"    , price:1100  , category:"Screen" },
+      ]
+      */
+      // - Make import from shared.service.ts
+    
+      // - Create var type [] (contactProducts)
+      
+      component1Products:megaProduct[]=[]
+    
+      // - create var contactTable = new class from SharedService()
+    
+      // - this.contactProducts = contactTable.arrayProduct
+    
+      constructor(private _SharedService:SharedService) { 
+    
+        // Bad Solution
+        //--------------
+        // - Any change in service constructor will make error 
+    
+        // let component1Table = new SharedService();
+    
+        // this.component1Products=component1Table.arrayProduct
+    
+        // Dependency Injection 
+        //----------------------
+        // - Take new instant from class without constructor
+        
+        // - set property in constructor(private _SharedService:SharedService)
+    
+        // - set private before property in constructor for use property value out of constructor
+    
+      }
+    
+      ngOnInit(): void {
+    
+        this._SharedService.arrayProduct.push({name:"Mega" , price:1000  , category:"Mega"})
+        
+        this.component1Products = this._SharedService.arrayProduct;
+    
+      }
+    
+    }    
+
+</code>
+                                </pre>
+
+                            </div>
+                
+                            <div class="col-lg-6 text-center">
+                                <h2>my-comp1.component.html</h2>
+                                <pre style="height: 500px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+
+    &#60;div class="container"&#62;
+
+        &#60;div class="col-12 bg-dark rounded-4 mb-5"&#62;
+
+            &#60;h3 class="text-center text-light py-3"&#62;
+    
+                &#60;i class="fa fa-home" aria-hidden="true"&#62;&#60;/i&#62;
+    
+                Hello From myComponent1
+    
+                &#60;i class="fa fa-home" aria-hidden="true"&#62;&#60;/i&#62;
+    
+            &#60;/h3&#62;
+  
+        &#60;/div&#62;
+  
+  
+        &#60;!------------------------------------------------------------------------------------------------------------------------ --&#62;
+        &#60;!-- Share Data Between Component Via Selector --&#62;
+        &#60;!-----------------------------------------------&#62;
+        &#60;!-- 
+        - Make Custom [Attributes]="var in TS file" in Selector I want share Data To it
+        - Go To child.component.ts and make import { Input } from '@angular/core';
+        - and Set @Input('bl7') bl7:string='' under function of decorator
+        - Go To child.component.html and Make Data Interpolation {{bl7}} 
+        --&#62;
+    
+        &#60;div class="bg-dark text-white"&#62;
+          &#60;app-my-component2 [bl7]="megaManUserName" [btte5]="megaManProduct"&#62;&#60;/app-my-component2&#62;
+        &#60;/div&#62;
+    
+    
+        &#60;!--------------------------------------------------------------------------------------------------------------&#62;
+    
+        &#60;div class="col-12 bg-dark rounded-4 my-5"&#62;
+    
+          &#60;h3 class="text-center text-light py-3"&#62;
+    
+            &#60;i class="fa fa-home" aria-hidden="true"&#62;&#60;/i&#62;
+    
+            Hello From myComponent1
+    
+            &#60;i class="fa fa-home" aria-hidden="true"&#62;&#60;/i&#62;
+    
+          &#60;/h3&#62;
+    
+        &#60;/div&#62;
+    
+        &#60;!--------------------------------------------------------------------------------------------------------------&#62;
+        &#60;!-- Share Data Between Component Via Service --&#62;
+        &#60;!----------------------------------------------&#62;
+        &#60;!--
+        - I Will Create Service Via CLI &#62;&#62; ng g s shared
+        --&#62;
+    
+        &#60;div class="bg-dark text-center border border-5 border-primary rounded-2"&#62;
+    
+          &#60;table class="table mb-0"&#62;
+    
+            &#60;thead class="text-white border-bottom border-5 border-primary"&#62;
+                &#60;th class="pb-3"&#62;Index&#60;/th&#62;
+                &#60;th class="pb-3"&#62;Category&#60;/th&#62;
+                &#60;th class="pb-3"&#62;Name&#60;/th&#62;
+                &#60;th class="pb-3"&#62;Price&#60;/th&#62;
+            &#60;/thead&#62;
+
+            &#60;tbody&#62;
+    
+              &#60;tr *ngFor="let product of component1Products; 
+                          let rowI = index; 
+                          let rowOdd = odd; 
+                          let rowEven = even; 
+                          let rowFirst = first; 
+                          let rowLast = last;" 
+                          [style.backgroundColor]="rowLast?'white' : rowEven?'lightblue':'aqua'"
+                          [class]=" rowFirst ? 'bg-white' : '' "&#62;
+
+    
+    
+                &#60;td&#62;{{rowI+1}}&#60;/td&#62;
+                &#60;td&#62;{{product.category}}&#60;/td&#62;
+                &#60;td&#62;{{product.name}}&#60;/td&#62;
+                &#60;td&#62;{{product.price}}&#60;/td&#62;
+
+              &#60;/tr&#62;
+    
+            &#60;/tbody&#62;
+    
+          &#60;/table&#62;
+    
+        &#60;/div&#62;
+    
+        &#60;!--------------------------------------------------------------------------------------------------------------&#62;
+  
+    &#60;/div&#62;
+                  
+</code>
+                                </pre>
+
+                            </div>
+
+                            <div class="col-lg-6 text-center">
+
+                                <h2>my-comp2.component.ts</h2>
+
+                                <pre style="height: 500px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+                
+    import { Component , Input , OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+    import { megaManProduct } from '../my-component1/my-component1.component';
+    import { SharedService, megaProduct } from '../shared.service';
+    
+    @Component({
+      selector: 'app-my-component2',
+      templateUrl: './my-component2.component.html',
+      styleUrls: ['./my-component2.component.css']
+    })
+    
+    // OnInit work after Component ready | after this set ngOnInit() function | For call API
+    
+    // OnChanges For Show change in data (bl7,btte5) | after this set ngOnChanges() function | Work Before OnInit
+    
+    // OnDestroy work during Component close | after this set ngOnDestroy() function | for close API call if i leave page
+    
+    export class MyComponent2Component implements OnInit, OnChanges, OnDestroy{
+    
+      @Input('bl7') bl7:string=''
+    
+      @Input('btte5') btte5:megaManProduct={} as megaManProduct
+    
+      // btte5:object={} as megaManProduct | Take Value From megaManProduct
+      // or 
+      // btte5:megaManProduct={name:'Mohamed',price=1000}
+    
+    
+      //-------------------------------------------------------------------
+      // Share Data Between Component
+      //-------------------------------------------------------------------
+      // - I Will Create Service Via CLI >> ng g s shared
+    
+      // - Remove shared code from two TS files and set in shared.service.ts
+      
+      /*
+      arrayProduct:megaProduct[] = [
+        {name:"Toshiba" , price:5000  , category:"TV"     },
+        {name:"Lenovo"  , price:3000  , category:"Laptop" },
+        {name:"HP"      , price:5000  , category:"Laptop" },
+        {name:"DELL"    , price:6000  , category:"Laptop" },
+        {name:"HTC"     , price:2000  , category:"Phone"  },
+        {name:"I_Phone" , price:13000 , category:"Phone"  },
+        {name:"BenQ"    , price:1000  , category:"Screen" },
+        {name:"DELL"    , price:1100  , category:"Screen" },
+      ]
+      */
+    
+      // - Make import from shared.service.ts
+    
+      // - Create var type [] (contactProducts)
+    
+      // - contactProducts run before OnInit
+      
+      component1Products:megaProduct[]=[]
+    
+      // - create var contactTable = new class from SharedService()
+    
+      // - this.contactProducts = contactTable.arrayProduct
+    
+      timer:any
+    
+      constructor() { 
+    
+        let component1Table = new SharedService()
+    
+        this.component1Products=component1Table.arrayProduct
+    
+        this.timer = setInterval(()=>{
+    
+          console.log("hi");
+          
+        },2000)
+    
+      }
+    
+      ngOnInit(): void {}
+    
+      ngOnChanges(changes:SimpleChanges): void {
+        
+        console.log(changes);
+        
+      }
+    
+      ngOnDestroy(): void {
+        
+        clearInterval(this.timer)
+    
+      }
+      
+    }
+    
+
+</code>
+                                </pre>
+
+                            </div>
+                
+                            <div class="col-lg-6 text-center">
+                                <h2>my-comp2.component.html</h2>
+                                <pre style="height: 500px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+
+    &#60;div class="container p-5"&#62;
+
+      &#60;div class="col-12 bg-dark rounded-4 mb-5"&#62;
+        
+        &#60;h3 class="text-center text-light py-3"&#62;
+      
+          &#60;i&#62; class="fa fa-home" aria-hidden="true"&#62;&#60;/i&#62;
+      
+          Hello From myComponent2
+      
+          &#60;i&#62; class="fa fa-home" aria-hidden="true"&#62;&#60;/i&#62;
+      
+        &#60;/h3&#62;
+      
+      &#60;/div&#62;
+      
+        &#60;!------------------------------------------------------------------------------------------------------------------------ --&#62;
+        &#60;!-- Share Data Between Component Via Selector --&#62;
+        &#60;!-----------------------------------------------&#62;
+        &#60;!-- 
+        - Make Custom [Attributes]="var in TS file" in Selector I want share Data To it
+        - Go To child.component.ts and make import { Input } from '@angular/core';
+        - and Set @Input('bl7') bl7:string='' under function of decorator
+        - Go To child.component.html and Make Data Interpolation {{bl7}} 
+        --&#62;
+  
+        &#60;h3&#62; class="text-center border-bottom py-3 mb-3"&#62;Customer Name&#60;/h3&#62;
+    
+        &#60;h1&#62; class="text-center text-primary"&#62;{{bl7}}&#60;/h1&#62;
+
+        &#60;h3&#62; class="text-center border-bottom py-3 mt-5 mb-3"&#62;The Product&#60;/h3&#62;
+
+        &#60;h1&#62; class="text-center text-primary"&#62;{{btte5.name}}&#60;/h1&#62;
+        &#60;h1&#62; class="text-center text-primary"&#62;{{btte5.type}}&#60;/h1&#62;
+        &#60;h1&#62; class="text-center text-primary"&#62;{{btte5.color}}&#60;/h1&#62;
+        &#60;h1&#62; class="text-center text-primary"&#62;{{btte5.price}}&#60;/h1&#62;
+
+        &#60;!--------------------------------------------------------------------------------------------------------------&#62;
+    
+        &#60;!--------------------------------------------------------------------------------------------------------------&#62;
+        &#60;!-- Share Data Between Component Via Service --&#62;
+        &#60;!----------------------------------------------&#62;
+        &#60;!--
+        - I Will Create Service Via CLI &#62;&#62; ng g s shared
+        --&#62;
+
+        &#60;div class="bg-dark text-center border border-5 border-primary rounded-2 mb-3"&#62;
+
+          &#60;table class="table mb-0"&#62;
+
+            &#60;thead class="text-white border-bottom border-5 border-primary"&#62;
+                &#60;th&#62; class="pb-3"&#62;Index&#60;/th&#62;
+                &#60;th&#62; class="pb-3"&#62;Category&#60;/th&#62;
+                &#60;th&#62; class="pb-3"&#62;Name&#60;/th&#62;
+                &#60;th&#62; class="pb-3"&#62;Price&#60;/th&#62;
+            &#60;/thead&#62;
+
+            &#60;tbody&#62;
+
+              &#60;tr *ngFor="let product of component1Products; 
+                          let rowI = index; 
+                          let rowOdd = odd; 
+                          let rowEven = even; 
+                          let rowFirst = first; 
+                          let rowLast = last;" 
+                          [style.backgroundColor]="rowLast?'white' : rowEven?'lightblue':'aqua'"
+                          [class]=" rowFirst ? 'bg-white' : '' "&#62;
+
+
+
+                &#60;td&#62;{{rowI+1}}&#60;/td&#62;
+                &#60;td&#62;{{product.category}}&#60;/td&#62;
+                &#60;td&#62;{{product.name}}&#60;/td&#62;
+                &#60;td&#62;{{product.price}}&#60;/td&#62;
+
+              &#60;/tr&#62;
+
+            &#60;/tbody&#62;
+
+          &#60;/table&#62;
+
+        &#60;/div&#62;
+
+        &#60;!--------------------------------------------------------------------------------------------------------------&#62;
+  
+    &#60;/div&#62;
+
+</code>
+                                </pre>
+
+                            </div>
+
+                        </div>
+                
+                    </div>
+                
+                </section>
+
+                <!-- API ------------------------------------------------------------------------------>
+
+                <section class="my-5 p-md-5 p-3 mega">
+                    <div class="btnDiv d-flex justify-content-start align-items-center">
+                        <button id="btn-4" class="border-0 bg-transparent text-danger fs-2 mb-0"
+                            onclick="changeScope(4)">&#62;&#62;&#62;</button>
+                        <label for="btn-4" style="cursor: pointer;">
+                            <h2 class="mb-0">* Call API :</h2>
+                        </label>
+                    </div>
+                
+                    <div id="button4" class="my-5 d-none">
+                
+                        <div class="row d-flex flex-wrap justify-content-around align-items-center py-3 my-3">
+                
+                            <div class="col-12 text-center mb-4">
+
+                                <h2>app.module.ts</h2>
+
+                                <div class="text-start border p-5 my-4 overflow-auto">
+                                    
+                                    <pre style="height: 500px;">
+<code>
+
+    import { HttpClientModule } from "@angular/common/http";
+    
+    @NgModule({
+      declarations: [
+        AppComponent,
+        HomeComponent,
+        NavbarComponent,
+        FooterComponent,
+        MoviesComponent,
+      ],
+
+      imports: [
+        HttpClientModule
+      ],
+
+      providers: [],
+      bootstrap: [AppComponent]
+    })
+
+    export class AppModule { }
+    
+</code>
+                                    </pre>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-12 text-center mb-4">
+
+                                <h2>mov-api.service.ts</h2>
+
+                                <div class="text-start border p-5 my-4 overflow-auto">
+                                    
+                                    <pre style="height: 500px;">
+<code>
+
+    import { HttpClient } from '@angular/common/http';
+    import { Injectable } from '@angular/core';
+    import { Observable } from 'rxjs';
+    
+    // --------------------------------------------------------
+    // Call API :
+    // -----------
+     
+    // - For call API go to app.module.ts and make import { HttpClientModule } from "@angular/common/http"; and imports:[HttpClientModule]
+    
+    
+    @Injectable({
+    
+      providedIn: 'root'
+    
+    })
+    export class MoviesApiService {
+    
+      constructor(private _HttpClient:HttpClient) { }
+    
+      getMovies():Observable<any>{
+    
+        return this._HttpClient.get('https://api.themoviedb.org/3/trending/movie/day?api_key=(key)&page=1')
+      
+      }
+    
+    }    
+
+</code>
+                                    </pre>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-6 text-center">
+
+                                <h2>movies.component.ts</h2>
+
+                                <pre style="height: 500px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+                
+    import { Component, OnDestroy, OnInit } from '@angular/core';
+    import { MoviesApiService } from '../movies-api.service';
+    
+    // --------------------------------------------------------
+    // Call API :
+    // -----------
+     
+    // - For call API go to app.module.ts and make import { HttpClientModule } from "@angular/common/http"; and imports:[HttpClientModule]
+    // - Create Service (MoviesApiService) For Call API and Make Export and Import in This File
+    // - Create Function For Call API And Call it in ngOnInit() 
+    
+    @Component({
+      selector: 'app-movies',
+      templateUrl: './movies.component.html',
+      styleUrls: ['./movies.component.css']
+    })
+    export class MoviesComponent implements OnInit, OnDestroy {
+    
+      allMovies:any = [];
+    
+      isLoading: Boolean = true;
+    
+      apiCall:any
+    
+      constructor(private _MoviesService:MoviesApiService) { }
+    
+      ngOnInit(): void {
+    
+        this.getAllData()
+    
+      }
+    
+      getAllData(){
+    
+        this.apiCall = this._MoviesService.getMovies().subscribe(
+    
+          // .subscribe() for call API (No Call Without subscribe())
+    
+          (res)=>{
+    
+            this.allMovies = res.results
+    
+            console.log(this.allMovies);
+    
+            this.isLoading = false
+            
+          },
+    
+          (err)=>{
+            
+            this.isLoading = false,
+    
+            console.log(err)
+          
+          },
+    
+          ()=>console.log("Completed")
+          
+        )
+    
+      }
+    
+      ngOnDestroy(): void {
+        this.apiCall.unsubscribe()
+      }
+    
+    }
+    
+
+</code>
+                                </pre>
+
+                            </div>
+                
+                            <div class="col-lg-6 text-center">
+                                <h2>movies.component.html</h2>
+                                <pre style="height: 500px;" class="text-start border my-4 overflow-auto">
+<code class="fs-6 d-block">
+
+    &#60;h3 class="text-center text-light bg-black py-4 my-4"&#62;
+      &#60;i class="fa fa-camera" aria-hidden="true"&#62;&#60;/i&#62;
+      Hello From Movies
+      &#60;i class="fa fa-camera" aria-hidden="true"&#62;&#60;/i&#62;
+    &#60;/h3&#62;
+    
+    &#60;!-- --------------------------------------------------------- --&#62;
+    &#60;!-- Call API --&#62;
+    &#60;!-- -------- --&#62;
+    &#60;!-- 
+    - For call API go to app.module.ts and make import { HttpClientModule } from "@angular/common/http"; and imports:[HttpClientModule]
+    --&#62;
+    
+    &#60;!-- --------------------------------------------------------- --&#62;
+    
+    &#60;div class="bg-black"&#62;
+    
+      &#60;h3 *ngIf="isLoading"&#62;LOADER.........&#60;/h3&#62;
+    
+      &#60;div class="container py-5"&#62;
+    
+        &#60;div class="row" *ngIf="!isLoading"&#62;
+    
+          &#60;div class="col-md-4 text-light text-center" *ngFor=" let movie of allMovies "&#62;
+    
+            &#60;div class="item"&#62;
+
+              &#60;img [src]="'https://image.tmdb.org/t/p/w500'+movie.poster_path" class="w-100" alt=""&#62;
+
+              &#60;h3&#62;{{movie.title}}&#60;/h3&#62;
+
+              &#60;p&#62;{{movie.overview}}&#60;/p&#62;
+
+            &#60;/div&#62;
+
+          &#60;/div&#62;
+
+        &#60;/div&#62;
+    
+      &#60;/div&#62;
+    
+    &#60;/div&#62;
+                  
+</code>
+                                </pre>
+
+                            </div>
+
+                        </div>
+                
+                    </div>
+                
+                </section>
+
+<!------------------------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------------------------>
+
+            </div>
+
+        </main>
+
+        <!---------------------------------------------------------------------------------------------------------------------------->
+        <!----------------------------------------------------------------------------------------------------------------------------> 
+        <!-- Footer -->
+        <!------------>
+
+        <footer id="contact" class="py-5 bg-black text-white">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-6 col-xl-3 my-3 my-lg-0">
+
+                        <h4 class="mb-4 pb-4 border-bottom">Author :</h4>
+
+                        <h1>M O H A M E D</h1>
+                        
+                        <h1>M A G D Y</h1>
+    
+                    </div>
+    
+                    <div class="col-md-6 col-xl-3 my-3 my-lg-0">
+    
+                        <h4 class="mb-4 pb-4 border-bottom">Contact :</h4>
+
+                        <h6><a href="mailto:Eng.M.Ezzeldeen@gmail.com" class="a_None text-white">Email: Eng.M.Ezzeldeen@gmail.com</a></h6>  
+
+                        <button class="bg-transparent text-white border-0 p-0" onclick="openLink('wa.me/+201285880488')"><h6 class="mb-0">Phone : +20 12 858 80 4 88</h6></button>    
+                        
+                        <div class="d-flex justify-content-start my-3">
+        
+                            <button onclick="openLink('github.com/Eng-M-Ma9dy')" class="SM-BTN-icon GitHub    me-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-github"></i>
+                            </button>
+                
+                            <button onclick="openLink('www.linkedin.com/in/eng-m-ma9dy/')" class="SM-BTN-icon LinkedIn  mx-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </button>
+        
+                            <button onclick="openLink('www.facebook.com/eng.m.ma9dy/')" class="SM-BTN-icon Facebook  mx-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-facebook"></i>
+                            </button>
+                
+                            <button onclick="openLink('www.instagram.com/eng.m.ma9dy/')" class="SM-BTN-icon Instagram ms-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-instagram"></i>
+                            </button>
+                
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-md-6 col-xl-3 my-3 my-lg-0">
+    
+                        <h4 class="mb-4 pb-4 border-bottom">My Pages :</h4>
+
+                        <h6><a href="mailto:Info.Unit.Alex@gmail.com" class="a_None text-white">Info.Unit.Alex@gmail.com</a></h6>  
+
+                        <button class="bg-transparent text-white border-0 p-0" onclick="openLink('wa.me/+201140155633')"><h6 class="mb-0">Phone : +20 11 40 155 6 33</h6></button>    
+                        
+                        <div class="text-light d-flex justify-content-start my-3">
+        
+                            <button onclick="openLink('www.facebook.com/info.unit.iu/')" class="SM-BTN-icon Facebook  me-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-facebook"></i>
+                            </button>
+                                            
+                            <button onclick="openLink('www.tiktok.com/@info.unit.iu')" class="SM-BTN-icon TikTok    mx-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </button>
+                
+                            <button onclick="openLink('www.instagram.com/info.unit.iu')" class="SM-BTN-icon Instagram mx-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-instagram"></i>
+                            </button>
+
+                            <button onclick="openLink('youtube.com/@Info.Unit-IU')" class="SM-BTN-icon Youtube   ms-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-youtube"></i>
+                            </button>
+                
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-md-6 col-xl-3 mt-3 mt-lg-0 d-none d-md-flex justify-content-start justify-content-xl-center">
+
+                        <button class="bg-transparent text-white border-0 p-0" onclick="openLink('eng-m-ma9dy.github.io/Portfolio/')"><img src="../src/Images/Logo-MM.jpg" class="footer_logo rounded-circle" alt=""></button>
+            
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+        <!---------------------------------------------------------------------------------------------------------------------------->
+        <!----------------------------------------------------------------------------------------------------------------------------> 
+        <!-- JS Links -->
+        <!-------------->
+                
+        <!-- Offline Bootstrap js : -->
+        <script src="../JS/bootstrap.bundle.min.js"></script>
+
+        <!-- jQuery js : -->
+        <script src="../JS/jquery-3.6.3.min.js"></script>
+        
+        <!-- My Shared js : -->
+        <script src="../JS/shared.js"></script>
+    
+    </body>
+</html>
