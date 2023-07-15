@@ -1,0 +1,773 @@
+/* -- Selector ------------------------------------------------------------------------------*/
+
+a[href^="A"]{
+  color: blue;
+  padding: 0 10px;
+}
+
+a[href$="B"]{
+  color: red;
+  padding: 0 10px;
+}
+
+a[href*="TEST"]{
+  color: white;
+  padding: 0 10px;
+}
+
+[name=testMegaD]{
+  text-decoration: none;
+}
+
+
+/* -- Font ------------------------------------------------------------------------------*/
+
+#sFontSizeWebV{
+  font-size: 2 rem;
+  font-style: italic;
+  font-weight: 500;
+  font-family: 'Courier New', Courier, monospace;
+  direction: ltr;
+  text-indent: 30px;
+}
+
+/* -- Border ------------------------------------------------------------------------------*/
+
+#border0 {
+  border-radius: 30px;
+
+  border-left: solid blue 10px;
+  border-right: solid blue 10px;
+  border-top: solid yellowgreen 10px;
+  border-bottom: solid yellowgreen 10px;
+}
+
+#border1 {
+  width: 300px;
+  height: 300px;
+  border: solid blue 30px;
+  border-radius: 50%;
+}
+
+#border2 {
+  background-color: black;
+  width: 40%;
+  height: 400px;
+  margin: 50px 10%;
+  border: solid blue 10px;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+#border3 {
+  width: 0;
+  height: 0;
+  border: 30px;
+  border-left: solid blue 100px;
+  border-right: solid blue 100px;
+  border-top: solid yellowgreen 100px;
+  border-bottom: solid yellowgreen 100px;
+}
+
+#border4 {
+  width: 0;
+  height: 0;
+  border: 30px;
+  border-left: solid transparent 100px;
+  border-right: solid transparent 100px;
+  border-right: solid transparent 100px;
+  border-bottom: solid blue 100px;
+}
+
+#border5_0{
+  position: relative;
+}
+
+#border5_1{
+  z-index: -1;
+  width: 80%;
+  height: 0;
+  margin: auto;
+  box-sizing: border-box;
+  border-left: solid blue 200px;
+  border-bottom: solid yellowgreen 200px;
+  border-top: solid yellowgreen 0;
+  border-right: solid blue 0;
+}
+
+#border5_2{
+  z-index: -1;
+  width: 80%;
+  margin: auto;
+  box-sizing: border-box;
+  height: 200px;
+  background-color: yellowgreen;
+}
+
+#border5_content{
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  bottom: 0;
+}
+
+/* -- Background ------------------------------------------------------------------------------*/
+
+#BG-G1 {
+  height: 300px;
+  background: linear-gradient(white, red, black);
+}
+
+#BG-G2 {
+  height: 300px;
+  background: linear-gradient(to left, white, red, black);
+
+}
+
+#BG-G3 {
+  height: 300px;
+  background: linear-gradient(-45deg, white, red, black);
+}
+
+
+#BG-G4 {
+  height: 300px;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.4));
+
+}
+
+#BG-G5 {
+  height: 300px;
+  background: linear-gradient(-101deg, red 50%, blue 100%);
+
+}
+
+#BG-G6 {
+  height: 300px;
+  background: radial-gradient(red, blue);
+
+}
+
+#BG-Test {
+  background-image: url(../src/Images/Motors.jpg);
+  height: 500px;
+
+}
+
+#BG-Test1 {
+  background-image: url(../src/Images/Motors.jpg);
+  background-size: 100% 100%;
+  height: 500px;
+}
+
+#BG-Test2 {
+  background-image: url(../src/Images/Motors.jpg);
+  background-size: cover;
+  height: 500px;
+}
+
+#BG-Test3 {
+  background-image: url(../src/Images/Motors.jpg);
+  background-size: contain;
+  height: 500px;
+}
+
+#BG-Test4 {
+  background-image: url(../src/Images/Motors.jpg);
+  background-size: 25% 25%;
+  background-repeat: repeat-x;
+  height: 500px;
+}
+
+#BG-Test5 {
+  background-image: url(../src/Images/Motors.jpg);
+  background-size: 25% 25%;
+  background-repeat: repeat-y;
+  height: 500px;
+}
+
+#BG-Test6 {
+  background-image: url(../src/Images/Motors.jpg);
+  background-size: 25% 25%;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+
+#BG-Test7 {
+  background-image: url(../src/Images/Motors.jpg);
+  background-size: 25% 25%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+
+#BG-Test8 {
+  background-image: url(../src/Images/Motors.jpg), url(../src/Images/Motors.jpg);
+  background-size: 25% 25%, 45% 45%;
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+
+/* -- Float ---------------------------------------------------------------------------------------*/
+
+.clear_both {
+  clear: both;
+}
+
+/* -- Before / After ------------------------------------------------------------------------------*/
+
+#be_af h1 {
+  text-align: center;
+  position: relative;
+}
+
+#be_af h1::before {
+  content: "";
+  width: 15%;
+  height: 10px;
+  top: 45%;
+  left: 0px;
+  position: absolute;
+  background-color: blue;
+}
+
+#be_af h1::after {
+  content: "";
+  width: 15%;
+  height: 10px;
+  top: 45%;
+  right: 0px;
+  position: absolute;
+  background-color: blue;
+}
+
+#bef_aft h1 {
+  text-align: center;
+  position: relative;
+  border: 5px solid white;
+  width: 80%;
+  height: 200px;
+  margin: auto;
+}
+
+#bef_aft h1::before {
+  content: "";
+  position: absolute;
+  background-color: blue;
+  width: 30%;
+  height: 100px;
+  top: 140px;
+  left: 10%;
+}
+
+#bef_aft h1::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  width: 5%;
+  height: 100px;
+  top: 140px;
+  left: 20%;
+}
+
+
+/* -- Hover ------------------------------------------------------------------------------*/
+
+#hover1 {
+  background-color: blue;
+  width: 25%;
+  height: 100px;
+  transition-duration: 2s;
+  transition-delay: 1s;
+  transition-property: width;
+  transition-timing-function: ease;
+}
+
+#hover1:hover {
+  width: 100%;
+}
+
+
+#hover2 {
+  background-color: blue;
+  width: 25%;
+  height: 100px;
+  transition: 2s 1s width;
+}
+
+#hover2:hover {
+  width: 100%;
+}
+
+#hover3 {
+  width: 25%;
+  height: 100px;
+  background-color: blue;
+  transition: 2s all;
+}
+
+#hover3:hover {
+  width: 100%;
+  height: 300px;
+}
+
+#hover4 {
+  width: 25%;
+  height: 100px;
+  background-color: blue;
+  transition: 2s 1s width, 2s 3s height;
+}
+
+#hover4:hover {
+  width: 100%;
+  height: 300px;
+}
+
+/* -- Transform ------------------------------------------------------------------------------*/
+
+#Transform1 {
+  background-image: url(../src/Images/img.jpg);
+  background-size: 100% 100%;
+  width: 100px;
+  height: 100px;
+  transition: transform 1s;
+}
+
+.t1:hover {
+  transform: rotate(45deg);
+
+}
+
+.t2:hover {
+  transform: rotate(360deg);
+
+}
+
+.t3:hover {
+  transform: rotatex(180deg);
+}
+
+.t4:hover {
+  transform: rotatey(180deg);
+}
+
+.t5:hover {
+  transform: rotatez(180deg);
+}
+
+
+.t6:hover {
+  transform: scale(2);
+}
+
+.t7:hover {
+  transform: scalex(2);
+}
+
+.t8:hover {
+  transform: scaley(2);
+}
+
+.t9:hover {
+  transform: scale(0.5, 2);
+}
+
+.t10:hover {
+  transform: scale(2, 0.5);
+}
+
+.t11:hover {
+  transform: skew(45deg);
+}
+
+.t12:hover {
+  transform: skewx(45deg);
+}
+
+.t13:hover {
+  transform: skewy(45deg);
+}
+
+.t14:hover {
+  transform: translate(50px);
+}
+
+.t15:hover {
+  transform: translatex(-50px);
+}
+
+.t16:hover {
+  transform: translatey(50px);
+}
+
+.t17:hover {
+  transform: translate(-50px, -50px);
+}
+
+.t18:hover {
+  transform: translate(-100px, -100px) rotate(360deg) scale(0.5) skew(45deg);
+}
+
+#Logo-Div{
+  border: 2px solid white;
+  position: relative;
+  overflow: hidden;
+  width: 75%;
+}
+
+#Logo-Div img{
+  width: 100%;
+  transition: transform 1s 2s;
+}
+
+#Logo-Div:hover img{
+  transform: scale(1.2);
+}
+
+
+#Logo-Caption{
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+  width: 100%;
+  opacity: 0;
+  transition: 2s all;
+  overflow: hidden;
+}
+
+#Logo-Div:hover #Logo-Caption{
+  transform: rotate(360deg);
+  opacity: 1;
+}
+
+#Logo-Caption h4{
+  position: relative;
+  bottom: 500%;
+  transition: 1s 3s bottom;
+}
+
+#Logo-Caption p{
+  position: relative;
+  top: 500%;
+  transition: 1s 3.5s top;
+}
+
+#Logo-Caption:hover h4{
+  bottom: 0;
+}
+
+#Logo-Caption:hover p{
+  top: 0;
+}
+
+/* -- Key Frames ------------------------------------------------------------------------------*/
+
+#keyFrame1 {
+  height: 400px;
+  background-color: red;
+  margin: auto;
+  animation-name: colors;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes colors {
+  0% {
+      background-color: red;
+  }
+
+  50% {
+      background-color: yellow;
+  }
+
+  75% {
+      background-color: green;
+  }
+
+  100% {
+      background-color: blue;
+  }
+}
+
+#keyFrame2 {
+  width: 200px;
+  height: 300px;
+  background-image: url(../src/Images/cars1.jpg);
+  margin: auto;
+  animation-name: img_s;
+  animation-duration: 8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  /* animation-iteration-count = The number of repetitions; */
+}
+
+@keyframes img_s {
+  0% {
+      background-image: url(../src/Images/cars1.jpg);
+      background-size: 100% 100%;
+  }
+
+  25% {
+      background-image: url(../src/Images/cars2.jpg);
+      background-size: 100% 100%;
+  }
+
+  50% {
+      background-image: url(../src/Images/cars3.jpg);
+      background-size: 100% 100%;
+  }
+
+  75% {
+      background-image: url(../src/Images/cars4.jpg);
+      background-size: 100% 100%;
+  }
+
+  100% {
+      background-image: url(../src/Images/cars5.jpg);
+      background-size: 100% 100%;
+  }
+}
+
+#keyFrame3 {
+  width: 70px;
+  transform: rotateY(180deg);
+  animation-name: taxi;
+  position: relative;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes taxi {
+  0% {
+      left: 10%;
+  }
+
+  50% {
+      left: 70%;
+      transform: rotateY(180deg);
+  }
+
+  51% {
+      transform: rotateY(360deg);
+  }
+
+  100% {
+      left: 10%;
+      transform: rotateY(360deg);
+  }
+}
+
+#keyFrame4 h1::after {
+  content: "F |";
+  animation-name: moveLetters;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moveLetters {
+  0% {
+      content: "F |";
+  }
+
+  2% {
+      content: "Fr |";
+  }
+
+  4% {
+      content: "Fre |";
+  }
+
+  6% {
+      content: "Free |";
+  }
+
+  8% {
+      content: "Freel |";
+  }
+
+  10% {
+      content: "Freela |";
+  }
+
+  12% {
+      content: "Freelan |";
+  }
+
+  14% {
+      content: "Freelanc |";
+  }
+
+  16% {
+      content: "Freelance |";
+  }
+
+  18% {
+      content: "Freelancer |";
+  }
+
+  20% {
+      content: "Freelance |";
+  }
+
+  22% {
+      content: "Freelanc |";
+  }
+
+  24% {
+      content: "Freelan |";
+  }
+
+  26% {
+      content: "Freela |";
+  }
+
+  28% {
+      content: "Freel |";
+  }
+
+  30% {
+      content: "Free |";
+  }
+
+  32% {
+      content: "Fre |";
+  }
+
+  34% {
+      content: "Fr |";
+  }
+
+  36% {
+      content: "F |";
+  }
+
+  38% {
+      content: " |";
+  }
+
+  40% {
+      content: "W |";
+  }
+
+  42% {
+      content: "We |";
+  }
+
+  44% {
+      content: "Web  |";
+  }
+
+  46% {
+      content: "Web D |";
+  }
+
+  48% {
+      content: "Web De |";
+  }
+
+  50% {
+      content: "Web Dev |";
+  }
+
+  52% {
+      content: "Web Deve |";
+  }
+
+  54% {
+      content: "Web Devel |";
+  }
+
+  56% {
+      content: "Web Develo |";
+  }
+
+  58% {
+      content: "Web Develop |";
+  }
+
+  60% {
+      content: "Web Develope |";
+  }
+
+  62% {
+      content: "Web Developer |";
+  }
+
+  64% {
+      content: "Web Develope |";
+  }
+
+  68% {
+      content: "Web Develop |";
+  }
+
+  70% {
+      content: "Web Develo |";
+  }
+
+  72% {
+      content: "Web Devel |";
+  }
+
+  74% {
+      content: "Web Deve |";
+  }
+
+  76% {
+      content: "Web Dev |";
+  }
+
+  78% {
+      content: "Web De |";
+  }
+
+  80% {
+      content: "Web D |";
+  }
+
+  82% {
+      content: "Web  |";
+  }
+
+  84% {
+      content: "Web |";
+  }
+
+  86% {
+      content: "We |";
+  }
+
+  88% {
+      content: "W |";
+  }
+
+  90% {
+      content: " |";
+  }
+
+  95% {
+      content: " |";
+  }
+}
+
+/* -- Shadow ------------------------------------------------------------------------------*/
+
+#shadow1 h1 {
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 3px blue;
+}
+
+#shadow2 {
+  width: 400px;
+  height: 400px;
+  box-shadow: 10px 10px 10px 10px black, 20px 20px 20px 10px white;
+}

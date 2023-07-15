@@ -1,0 +1,154 @@
+/* ----------------------------------------------------------------------------- */
+/* Main Section ---------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------- */
+
+#BG-Animation{
+  width: 100%;
+  height: 100%;
+  background-image: url(../src/Images/BG-Section-Main.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+#mainDiv{
+    height: 100%;
+    position: relative;
+}
+
+#mainSectionTitle{
+    font-size: 50px;
+}
+
+
+.myStyle{
+   width: 180px;
+   height: 80px;
+   margin: 0 15px;
+   color: white;
+   transition: all 1s;
+   border-radius: 10px;
+   border: solid blueviolet 5px;
+   background-color: black;
+}
+.myStyle h1{
+    color: white;
+ }
+
+.myStyle:hover{
+    background-color: black;
+    border: solid #E7008A 5px;
+    transform: skew(-20deg);
+ }
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+ a h1{
+    transition: all 1s;
+ }
+
+a:hover h1{
+   transform: skew(20deg) rotate(360deg);
+}
+
+
+/* ------------------------------------------------------------ */
+
+.sectionIMG{
+  width:100%;
+  border-radius:2% 2%;
+}
+
+.sectionIMG_white{
+
+  border: solid blueviolet 6px;
+
+}
+
+.sectionIMG_black{
+
+  border: solid #E7008A 6px;
+
+
+}
+
+label{
+  display:block;
+  width:420px;
+  height:592px;
+  top:50%;
+  left:50%;
+  perspective:1000px;
+  transform-style:preserve-3d;
+  cursor:pointer;
+}
+
+.flip-card{
+  width:100%;
+  height:100%;
+  transition: all 500ms ease-in-out;
+  transform-style:preserve-3d;
+  animation: rotateCard 2000ms;
+}
+
+.flip-card .front, .flip-card .back{
+  position:absolute;
+  width:100%;
+  height:100%;
+  text-align:center;
+  background:#fff;
+  backface-visibility:hidden;
+}
+
+.flip-card .front{
+  border-radius:0 50px 0 50px;
+
+}
+
+.flip-card .back{
+  border-radius:50px 0 50px 0;
+}
+
+.flip-card .back{
+  transform: rotateY(180deg);
+  color:#000;
+  background:#253373
+}
+
+label:hover .flip-card{
+  transform:rotateY(180deg);
+  border-radius:0 20px 0 20px;
+}
+
+.front{
+
+  border: solid blueviolet 6px;
+
+}
+
+.back{
+  
+  border: solid #E7008A 6px;
+
+}
+
+.back .click{
+  margin:20px;
+  font-size:27px;
+  font-weight:bold;
+  color:blueviolet;
+}
+
+@keyframes rotateCard{
+  0%{
+    transform:rotateY(0deg);
+  }
+  50%{
+    transform:rotateY(180deg);
+  }
+  100%{
+    transform:rotateY(360deg);
+  }
+}
