@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Eng: Mohamed Magdy Mettwally">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="The Reference For Front-End Developers, It's Contain All Code The Developers use in coding, HTML, CSS, SASS, Bootstrap, JS, TS, Angular2">
+        <meta name="keywords" content="HTML CSS SASS Bootstrap JS TS Angular2 Coding Developers Front-End">
+
+        <title>TypeScript</title>
+        <meta property="og:image" content="./../src/Images/Logo-MM-Cover.jpg">
+        <link rel="website icon" type="PNG" href="./../src/Images/Logo-MM-Title.png">
+
+        <!-- Offline Bootstrap CSS : -->
+        <link href="../CSS/bootstrap.min.css" rel="stylesheet"/>
+
+        <!-- FontAwesome CSS : -->
+        <link href="../CSS/all.min.css" rel="stylesheet"/>
+        
+        <!-- My Shared CSS : -->
+        <link href="../CSS/shared.css" rel="stylesheet"/>
+
+    </head>
+
+    <body>
+
+        <!---------------------------------------------------------------------------------------------------------------------------->
+        <!----------------------------------------------------------------------------------------------------------------------------> 
+        <!-- Loader -->
+        <!------------>
+
+        <div id="myLoading">
+
+            <!---------------------------------------------------------------->
+    
+            <div id="loadingDiv" class="d-flex justify-content-center align-items-center">
+                <div id="loaderDiv" class="loader--style6" title="5">
+                    <svg id="loaderSize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="30px"
+                        viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                        <rect x="0" y="13" width="4" height="5" fill="blue">
+                            <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0s" dur="0.6s"
+                                repeatCount="indefinite" />
+                            <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0s" dur="0.6s"
+                                repeatCount="indefinite" />
+                        </rect>
+                        <rect x="10" y="13" width="4" height="5" fill="white">
+                            <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.15s" dur="0.6s"
+                                repeatCount="indefinite" />
+                            <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.15s" dur="0.6s"
+                                repeatCount="indefinite" />
+                        </rect>
+                        <rect x="20" y="13" width="4" height="5" fill="blue">
+                            <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.3s" dur="0.6s"
+                                repeatCount="indefinite" />
+                            <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.3s" dur="0.6s"
+                                repeatCount="indefinite" />
+                        </rect>
+                    </svg>
+                </div>
+            </div>
+    
+            <!---------------------------------------------------------------->
+    
+        </div>
+
+        <!---------------------------------------------------------------------------------------------------------------------------->
+        <!----------------------------------------------------------------------------------------------------------------------------> 
+        <!-- Header -->
+        <!------------>
+
+        <header id="headerSection" class="w-100 vh-100 mb-1">
+
+            <div id="headerDiv" class="overflow-hidden position-relative">
+
+                <svg id="svg_white" viewBox="0 0 1440 320">
+                    <path fill="white" fill-opacity="1" d="M0,0L24,16C48,32,96,64,144,80C192,96,240,96,288,80C336,64,384,32,432,48C480,64,528,128,576,144C624,160,672,128,720,133.3C768,139,816,181,864,197.3C912,213,960,203,1008,208C1056,213,1104,235,1152,245.3C1200,256,1248,256,1296,250.7C1344,245,1392,235,1416,229.3L1440,224L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"></path>
+                </svg>
+
+                <svg id="svg_blueviolet" viewBox="0 0 1440 320">
+                    <path fill="blueviolet" fill-opacity="1" d="M0,0L24,16C48,32,96,64,144,80C192,96,240,96,288,80C336,64,384,32,432,48C480,64,528,128,576,144C624,160,672,128,720,133.3C768,139,816,181,864,197.3C912,213,960,203,1008,208C1056,213,1104,235,1152,245.3C1200,256,1248,256,1296,250.7C1344,245,1392,235,1416,229.3L1440,224L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"></path>
+                </svg>
+
+                <div id="headerDiv_Content" class="d-flex flex-column justify-content-center align-items-start">
+
+    
+                    <div class="ms-3 text-white">
+
+                        <h4>Front End..</h4>
+                        <h1 id="theMainTitle" class="fw-bold">TypeScript</h1>
+                        <h5 class="text-end">Reference</h5>
+
+                    </div>
+                                
+                    <div>
+                        <div class="d-flex justify-content-start ms-3 mb-3">
+        
+                            <div class="rotating-text">
+                    
+                                <p class="kf text-light">I'm a </p>
+                    
+                                <p>
+                                    <span class="word w-1"> M.Magdy    </span>
+                                    <span class="word w-2"> Full-Stack </span>
+                                    <span class="word w-3"> Developer  </span>
+                                </p>
+                            
+                            </div>
+        
+                        </div>
+        
+                        <div class="text-light ms-3 d-flex justify-content-start">
+                
+                            <button onclick="openLink('www.linkedin.com/in/eng-m-ma9dy/')" class="SM-BTN-icon LinkedIn rounded-circle me-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </button>
+        
+                            <button onclick="openLink('github.com/Eng-M-Ma9dy')" class="SM-BTN-icon GitHub rounded-circle mx-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-github"></i>
+                            </button>
+        
+                            <button onclick="openLink('www.facebook.com/eng.m.ma9dy/')" class="SM-BTN-icon Facebook rounded-circle mx-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-facebook"></i>
+                            </button>
+                
+                            <button onclick="openLink('www.instagram.com/eng.m.ma9dy/')" class="SM-BTN-icon Instagram rounded-circle mx-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-instagram"></i>
+                            </button>
+                
+                        </div>
+                        
+                    </div>
+                
+                </div>
+
+            </div>
+
+        </header>
+
+        <!---------------------------------------------------------------------------------------------------------------------------->
+        <!----------------------------------------------------------------------------------------------------------------------------> 
+        <!-- Main -->
+        <!---------->
+
+        <main id="mainSection" class="text-white mb-1">
+        
+            <div id="mainDiv" class="py-5">
+
+<!------------------------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------------------------>
+    
+    <div class="mt-5">
+        <button id="homeBTN" onclick="openLink('eng-m-ma9dy.github.io/FrontEnd/')" class="border-0 mx-auto text-white bg-primary fs-1 d-flex justify-content-center align-items-center">
+            <i class="px-2 border-0 fa-solid fa-house-chimney"></i> <span id="homeText" class="d-none">Home</span>
+        </button>
+    </div>
+
+
+
+
+    <div class="container-xl mb-5">
+
+        <div class="row">
+            <div class="col-12">
+                <h1 class="mt-5  text-center">( <span class="text-primary">TypeScript</span> ) </h1>
+
+                <form class="form-group col-10 col-lg-8 mx-auto my-5">    
+
+                    <input id="sDB1_1" onkeyup="searchDB(this.value)" type="=text" placeholder="Search" class="form-control mt-3 mb-4">    
+
+                </form>
+
+                <!-- About TS ------------------------------------------------------------------------->
+
+                <div  class="mb-4 p-md-5 p-3 mega">
+                    <div class="border mb-4 p-4">
+                        <h5>  
+<pre>
+
+* TypeScript :
+
+    TypeScript: (JavaScript + Type + Interface)
+
+    TypeScript: work with Compiler for Convert The Sheet from TypeScript to JavaScript
+
+    1. For Work on TypeScript i Need to install the Compiler
+     - Open Terminal (CMD)
+     > npm i typescript
+
+    2. Create New File index.ts
+
+    3. For Convert File From TS to JS After Code Finished
+    - Open Terminal (CMD)
+    > tsc index.ts
+
+    4. VS-Code Will Be created index.js File From TS File
+
+    5. link New index.js file in HTML Sheet
+
+</pre>
+                        </h5>
+                    </div>
+
+                </div>
+
+                <!-- Variables ------------------------------------------------------------------------------>
+
+                <section class="my-5 p-md-5 p-3 mega">
+                    <div class="btnDiv d-flex justify-content-start align-items-center">
+                        <button id="btn-15"class="border-0 bg-transparent text-danger fs-2 mb-0"
+                            onclick="changeScope(15)">&#62;&#62;&#62;</button>
+                        <label for="btn-15"style="cursor: pointer;">
+                            <h2 class="mb-0">* Variables : </h2>
+                        </label>
+                    </div>
+
+                    <div id="button15"class="my-5 d-none">
+
+                        <div class="row d-flex flex-wrap justify-content-around align-items-center py-3 my-3">
+
+                            <div class="col-12 text-center">
+
+                                <h2>TS Code </h2>
+                                
+                                <pre style="height: 400px;"class="text-start border p-3 my-4 overflow-auto">
+    
+    let userName        : string    = "magdy";   // userName  = true (Error)
+    let age             : number    = 25;        // age       = true (Error)
+    let single          : boolean   = true;      // single    = 3030 (Error)
+
+    let arrayOfString   : string[]  = ["ahmed","mohamed","amr","omar"]
+    let arrayOfNumber   : number[]  = [28,25,20,30,100,50]
+    let myObject        : object    = {}
+                                
+    let mix1            : any       = true;    mix1 = "BMW";   mix1 = 1001;
+    let mix2            : unknown   = true;    mix2 = "BMW";   mix2 = 1001;
+
+    let tel             : number | null      = null;          tel   = 4954412;
+    let title           : string | undefined = undefined;     title = "admin";
+
+    // Array Type Tuple
+    // ------------------
+    let carName1        : [string,string,number,boolean] = ["BMW","X",6,true ]
+    let carName2        : [string,string,number,boolean] = ["BMW","X",4,false]
+    
+    let listNOrS1       : string[] | number [] = [1,2,3];   listNOrS1 = ['A','B','C']
+
+    // Array Type Union
+    // ------------------
+    let listNOrS2       : (string  | number)[] = [1,2,3,4,'A','B','C',5,6,7,'D','E',]
+
+                                </pre>
+
+                            </div>
+
+                        </div>
+                    
+                    </div>
+
+                </section>
+
+                <!-- Function ------------------------------------------------------------------------------>
+
+                <section class="my-5 p-md-5 p-3 mega">
+                    <div class="btnDiv d-flex justify-content-start align-items-center">
+                        <button id="btn-16"class="border-0 bg-transparent text-danger fs-2 mb-0"
+                            onclick="changeScope(16)">&#62;&#62;&#62;</button>
+                        <label for="btn-16"style="cursor: pointer;">
+                            <h2 class="mb-0">* Functions : </h2>
+                        </label>
+                    </div>
+
+                    <div id="button16"class="my-5 d-none">
+
+                        <div class="row d-flex flex-wrap justify-content-around align-items-center py-3 my-3">
+
+                            <div class="col-12 text-center">
+
+                                <h2>TS Code </h2>
+                                
+                                <pre style="height: 400px;"class="text-start border p-3 my-4 overflow-auto">
+    
+    function takeStringReturnString (name:string) :string{
+        name.toUpperCase()
+        return name
+    }
+
+    console.log(
+
+        takeStringReturnString('Mohamed Magdy')
+    );
+
+    //------------------------------------------------------
+
+    function takeNumberReturnNumber (age:number) :number{
+
+        return age
+    }
+
+    console.log (
+
+        takeNumberReturnNumber(25)
+    )
+
+    //------------------------------------------------------
+
+    function takeStringReturnBoolean (authorization : string) :boolean{
+
+        if (status.toLowerCase() == "admin") {
+
+            return true
+
+        }else{
+
+            return false
+        }
+    }
+
+    console.log (
+
+        takeStringReturnBoolean('admin')
+    )
+
+    //------------------------------------------------------
+
+    function takeStringNoReturn (name:string) :void{
+
+        console.log ( name.toLocaleLowerCase )
+
+    }
+
+    takeStringNoReturn('Mohamed Magdy')
+
+    //------------------------------------------------------
+
+    function takeArrayOfNumberReturnArrayOfNumber (arrayOfNumber:number[]):number[]{
+
+        return arrayOfNumber
+    
+    }
+    
+    console.log(
+    
+        takeArrayOfNumberReturnArrayOfNumber( [1,2,3,4,5,6,7,8,9] ).slice(0,3)
+    )
+
+    //------------------------------------------------------
+
+    function takeArrayOfStringReturnArrayOfString (arrayOfString:string[]):string[]{
+    
+        return arrayOfString
+    }
+    
+    console.log(
+        
+        takeArrayOfStringReturnArrayOfString ( ['A','B','C','D','E','F','G','H','I'] ).slice(0,3)
+    
+    )
+
+    //------------------------------------------------------
+
+    function takeArrayOfBooleanReturnArrayOfBoolean (arrayOfBoolean:boolean[]):boolean[]{
+
+        return arrayOfBoolean
+    }
+    console.log(
+        
+        takeArrayOfBooleanReturnArrayOfBoolean ([true,true,true,false,false,false,false,false,false]).slice(0,3)
+    )
+
+    //------------------------------------------------------
+
+    function selectAnyTypeOfArrayDuringCall &#60;anyType&#62; (arrayOfAnyType:anyType[]):anyType[]{
+
+        return arrayOfAnyType.slice(0.3)
+    }
+    
+    console.log(
+    
+        selectAnyTypeOfArrayDuringCall &#60;number&#62;  ([1,2,3,4,5,6,7,8,9]).slice(0,3)
+    )
+    console.log(
+        
+        selectAnyTypeOfArrayDuringCall &#60;string&#62;  (['A','B','C','D','E','F','G','H','I']).slice(0,3)
+    )
+    
+    console.log(
+    
+        selectAnyTypeOfArrayDuringCall &#60;boolean&#62; ([true,true,true,false,true,true,true,true,true]).slice(0,3)
+    )
+
+                                </pre>
+
+                            </div>
+
+                        </div>
+                    
+                    </div>
+
+                </section>
+
+                <!-- Interface ------------------------------------------------------------------------------>
+
+                <section class="my-5 p-md-5 p-3 mega">
+                    <div class="btnDiv d-flex justify-content-start align-items-center">
+                        <button id="btn-17"class="border-0 bg-transparent text-danger fs-2 mb-0"
+                            onclick="changeScope(17)">&#62;&#62;&#62;</button>
+                        <label for="btn-17"style="cursor: pointer;">
+                            <h2 class="mb-0">* Interface : </h2>
+                        </label>
+                    </div>
+
+                    <div id="button17"class="my-5 d-none">
+
+                        <div class="row d-flex flex-wrap justify-content-around align-items-center py-3 my-3">
+
+                            <div class="col-12 text-center">
+
+                                <h2>TS Code </h2>
+                                
+                                <pre style="height: 400px;"class="text-start border p-3 my-4 overflow-auto">
+    
+    let product1: object[] = [
+
+        {name: 'HP'    , price:'3000', onSale:'true'},
+        {name: 'Dell'  , price: 5000 , onSale: true },
+        {name: 'HTC'   , price: 2000 , onSale: false , category:'Phone'},
+        {name: 'Nokia' , price: 1500 , onSale: false , category:'Phone'},
+
+    ]
+
+    console.log("object = ", product1)
+
+
+    console.log('-----------------------------------------------------------------------------------------------------------------------------------------------------')
+
+
+    interface product2{
+        name:string,
+        price:number,
+        onSale:boolean,
+        id?:number,
+    }
+
+    let product2: product2[] = [
+
+        // {name: 'HP'    , price:'3000', onSale:'true'}, // Error
+
+        {name: 'HP'    , price: 3000 , onSale: true  , id: 1},
+        {name: 'Dell'  , price: 5000 , onSale: true  , id: 2},
+
+    ]
+
+    console.log("interface = ", product2)
+
+
+
+    interface product2{
+        category?:string,
+    }
+
+    let product2: product2[] = [
+
+        {name: 'HTC'   , price: 2000 , onSale: false , category:'Phone'},
+        {name: 'Nokia' , price: 1500 , onSale: false , category:'Phone'},
+    ]
+
+    console.log("interface = ", product2)
+
+                                </pre>
+
+                            </div>
+
+                        </div>
+                    
+                    </div>
+
+                </section>
+
+                <!-- Type ------------------------------------------------------------------------------>
+
+                <section class="my-5 p-md-5 p-3 mega">
+                    <div class="btnDiv d-flex justify-content-start align-items-center">
+                        <button id="btn-18"class="border-0 bg-transparent text-danger fs-2 mb-0"
+                            onclick="changeScope(18)">&#62;&#62;&#62;</button>
+                        <label for="btn-18"style="cursor: pointer;">
+                            <h2 class="mb-0">* Type : </h2>
+                        </label>
+                    </div>
+
+                    <div id="button18"class="my-5 d-none">
+
+                        <div class="row d-flex flex-wrap justify-content-around align-items-center py-3 my-3">
+
+                            <div class="col-12 text-center">
+
+                                <h2>TS Code </h2>
+                                
+                                <pre style="height: 400px;"class="text-start border p-3 my-4 overflow-auto">
+
+    type product = {
+
+        name:string,
+        price:number,
+        onSale:boolean,
+        id?:number,
+    }
+
+    let product: product[] = [
+        {name: 'HP'    , price: 3000 , onSale: true  , id: 1},
+        {name: 'Dell'  , price: 5000 , onSale: true  , id: 2},
+        {name: 'HTC'   , price: 2000 , onSale: false , },
+    ]
+
+    console.log("Type1 = ", product)
+
+    type newProduct = product & {
+        category?:string,
+    }
+
+    let newProduct: newProduct[] = [
+        {name: 'HTC'   , price: 2000 , onSale: false , category:'Phone'},
+        {name: 'Nokia' , price: 1500 , onSale: false , category:'Phone'},
+    ]
+
+    console.log("Type2 = ",newProduct)
+
+
+    // The Class in TS Convert To Function In JS ES5
+
+                                </pre>
+
+                            </div>
+
+                        </div>
+                    
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+<!------------------------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------------------------>
+
+            </div>
+
+        </main>
+
+        <!---------------------------------------------------------------------------------------------------------------------------->
+        <!----------------------------------------------------------------------------------------------------------------------------> 
+        <!-- Footer -->
+        <!------------>
+
+        <footer id="contact" class="py-5 bg-black text-white">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-6 col-xl-3 my-3 my-lg-0">
+
+                        <h4 class="mb-4 pb-4 border-bottom">Author :</h4>
+
+                        <h1>M O H A M E D</h1>
+                        
+                        <h1>M A G D Y</h1>
+    
+                    </div>
+    
+                    <div class="col-md-6 col-xl-3 my-3 my-lg-0">
+    
+                        <h4 class="mb-4 pb-4 border-bottom">Contact :</h4>
+
+                        <h6><a href="mailto:Eng.M.Ezzeldeen@gmail.com" class="a_None text-white">Email: Eng.M.Ezzeldeen@gmail.com</a></h6>  
+
+                        <button class="bg-transparent text-white border-0 p-0" onclick="openLink('wa.me/+201285880488')"><h6 class="mb-0">Phone : +20 12 858 80 4 88</h6></button>    
+                        
+                        <div class="d-flex justify-content-start my-3">
+        
+                            <button onclick="openLink('github.com/Eng-M-Ma9dy')" class="SM-BTN-icon GitHub    me-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-github"></i>
+                            </button>
+                
+                            <button onclick="openLink('www.linkedin.com/in/eng-m-ma9dy/')" class="SM-BTN-icon LinkedIn  mx-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </button>
+        
+                            <button onclick="openLink('www.facebook.com/eng.m.ma9dy/')" class="SM-BTN-icon Facebook  mx-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-facebook"></i>
+                            </button>
+                
+                            <button onclick="openLink('www.instagram.com/eng.m.ma9dy/')" class="SM-BTN-icon Instagram ms-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-instagram"></i>
+                            </button>
+                
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-md-6 col-xl-3 my-3 my-lg-0">
+    
+                        <h4 class="mb-4 pb-4 border-bottom">My Pages :</h4>
+
+                        <h6><a href="mailto:Info.Unit.Alex@gmail.com" class="a_None text-white">Info.Unit.Alex@gmail.com</a></h6>  
+
+                        <button class="bg-transparent text-white border-0 p-0" onclick="openLink('wa.me/+201140155633')"><h6 class="mb-0">Phone : +20 11 40 155 6 33</h6></button>    
+                        
+                        <div class="text-light d-flex justify-content-start my-3">
+        
+                            <button onclick="openLink('www.facebook.com/info.unit.iu/')" class="SM-BTN-icon Facebook  me-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-facebook"></i>
+                            </button>
+                                            
+                            <button onclick="openLink('www.tiktok.com/@info.unit.iu')" class="SM-BTN-icon TikTok    mx-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </button>
+                
+                            <button onclick="openLink('www.instagram.com/info.unit.iu')" class="SM-BTN-icon Instagram mx-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-instagram"></i>
+                            </button>
+
+                            <button onclick="openLink('youtube.com/@Info.Unit-IU')" class="SM-BTN-icon Youtube   ms-2 fs-3 bg-light d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-youtube"></i>
+                            </button>
+                
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-md-6 col-xl-3 mt-3 mt-lg-0 d-none d-md-flex justify-content-start justify-content-xl-center">
+
+                        <button class="bg-transparent text-white border-0 p-0" onclick="openLink('eng-m-ma9dy.github.io/Portfolio/')"><img src="./../src/Images/Logo-MM.jpg" class="footer_logo rounded-circle" alt=""></button>
+            
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+        <!---------------------------------------------------------------------------------------------------------------------------->
+        <!----------------------------------------------------------------------------------------------------------------------------> 
+        <!-- JS Links -->
+        <!-------------->
+        
+        <!-- Offline Bootstrap js : -->
+        <script src="../JS/bootstrap.bundle.min.js"></script>
+
+        <!-- jQuery js : -->
+        <script src="../JS/jquery-3.6.3.min.js"></script>
+
+        <!-- My Shared js : -->
+        <script src="../JS/shared.js"></script>
+    
+    </body>
+</html>
