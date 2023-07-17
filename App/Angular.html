@@ -72,7 +72,7 @@
 
         <header id="headerSection" class="w-100 vh-100 mb-1">
 
-            <div id="headerDiv" class="overflow-hidden position-relative">
+            <div id="headerDiv" class="overflow-auto position-relative">
 
                 <svg id="svg_white" viewBox="0 0 1440 320">
                     <path fill="white" fill-opacity="1" d="M0,0L24,16C48,32,96,64,144,80C192,96,240,96,288,80C336,64,384,32,432,48C480,64,528,128,576,144C624,160,672,128,720,133.3C768,139,816,181,864,197.3C912,213,960,203,1008,208C1056,213,1104,235,1152,245.3C1200,256,1248,256,1296,250.7C1344,245,1392,235,1416,229.3L1440,224L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"></path>
@@ -174,9 +174,9 @@
                 <!-- About Angular ------------------------------------------------------------------------->
 
                 <div  class="mb-4 p-md-5 p-3 mega">
-                    <div class="border mb-4 p-4">
-                        <h5>  
-<pre>
+                    <div class="border mb-4">
+                        <h5 class="m-0">  
+<pre style="height: 600px;" class="m-0">
 
     * For Use Angular :
     ---------------------
@@ -646,7 +646,7 @@
 
                                 <h2>Web View </h2>
 
-                                <div class="text-center border p-5 my-4 overflow-auto">
+                                <div class="text-center border p-3 my-4 overflow-auto">
                                     
                                     <!--  -->
                                     
@@ -658,7 +658,7 @@
                                       
                                             <div class="col-12 rounded-4">
                                         
-                                              <h3 class="text-center text-light py-3">
+                                              <h4 class="text-center text-light py-3">
                                         
                                                 <i class="fa fa-home" aria-hidden="true"></i>
                                         
@@ -666,7 +666,7 @@
                                         
                                                 <i class="fa fa-home" aria-hidden="true"></i>
                                         
-                                              </h3>
+                                              </h4>
                                         
                                             </div>
                                         
@@ -675,41 +675,21 @@
                                             <div id="MegaDiv" class="col-md-6 mx-auto py-5 my-2 text-center rounded-5 border border-5"
                                               [style]=" themToggle ? themLight : themDark " [class]=" themToggle == true ? 'border-primary': 'border-light' "
                                               [class.px-5]=" themToggle ">
+
                                         
-                                              <!-- ----------------------------------------- -->
-                                              <!-- Binding -->
-                                              <!-- ------- -->
-                                        
-                                              <!-- One Way Data Binding (From TS to HTML) -->
-                                        
-                                              <!-- Data Interpolation -->
-                                              <!-- Set Name of Var Between two {{}} -->
                                               <div class="d-flex justify-content-center">
                                                 <h3><span class="text-light  me-2">TOYOTA</span></h3>
                                                 <h3><span class="text-danger ms-2">EV 4X4</span></h3>
                                               </div>
                                         
-                                              <!-- Attributes Binding -->
-                                              <!-- Set Attributes Between [] and Set name of var between "" -->
                                               <img src="./../src/Images/Toyota.jpg" class="w-100 my-3 rounded-2">
                                         
-                                              <!-- Event Binding -->
-                                              <!-- Set Event between () and set name of function between "" -->
-                                              <!-- for get information about click set $event , and set e:MouseEvent in TS file -->
                                               <button class="btn btn-danger my-2 d-block w-100 m-auto" (click)="type($event)">The Type</button>
                                         
-                                              <!-- For Make If Condition -->
-                                              <!-- [style.backgroundColor]=" Condition ? 'Action' : 'ElseAction' " -->
-                                              <!-- Note 1: Don't Set Space in If Condition Line -->
-                                              <!-- Notes2:
-                                                   - I have two option for set style class
-                                                       1. [style.backgroundColor]="black" 
-                                                       2. [style]="background-Color:black;" 
-                                                -->
+
                                               <h1 class="w-100 my-3 py-2 m-auto text-center text-white"
                                                 [style.backgroundColor]=" carPrice > 800000 ? '#DC3545' : 'green' "> Price : 700000 </h1>
                                         
-                                              <!-- Example : Change Themes Mode Of #MegaDiv Div By Change Style and Class -->
                                               <button class="btn btn-primary my-2 d-block w-25 m-auto" (click)="themHandle($event)">L/D Mode</button>
                                         
                                             </div>
@@ -876,7 +856,7 @@
 
                                 <h2>Web View </h2>
 
-                                <div class="text-center border p-5 my-4 overflow-auto">
+                                <div class="text-center border p-3 my-4 overflow-auto">
                                     
                                     <!--  -->
                                     
@@ -888,7 +868,7 @@
                                       
                                             <div class="col-12 rounded-4">
                                         
-                                              <h3 class="text-center text-light py-3">
+                                              <h4 class="text-center text-light py-3">
                                         
                                                 <i class="fa fa-home" aria-hidden="true"></i>
                                         
@@ -896,7 +876,7 @@
                                         
                                                 <i class="fa fa-home" aria-hidden="true"></i>
                                         
-                                              </h3>
+                                              </h4>
                                         
                                             </div>
                                         
@@ -1221,19 +1201,17 @@
 
                                 <h2>Web View </h2>
 
-                                <div class="text-center border p-5 my-4 overflow-auto">
+                                <div class="text-center border p-3 my-4 overflow-auto">
                                     
                                     <!--  -->
                                     
                                     <div class=" bg-black">
-
-                                        <div class="container">
-                                      
-                                          <div class="row">
+                                    
+                                        <div class="row">
                                       
                                             <div class="col-12 rounded-4">
                                         
-                                              <h3 class="text-center text-light py-3">
+                                              <h4 class="text-center text-light py-3">
                                         
                                                 <i class="fa fa-home" aria-hidden="true"></i>
                                         
@@ -1241,7 +1219,7 @@
                                         
                                                 <i class="fa fa-home" aria-hidden="true"></i>
                                         
-                                              </h3>
+                                              </h4>
                                         
                                             </div>
                                                                             
@@ -1332,37 +1310,37 @@
                                                 </div>
                                                 
                                     
-                                                <div class="text-white text-center border border-5 border-light rounded-3 my-5 py-5">
-                                                    <h4 class="my-5"> Name : MEGA  |  Age : 26 </h4>
-                                                    <h4 class="my-5"> Condition : If Age &#60; 30 | Display The Name </h4>
+                                                <div class="text-white text-center border border-5 border-light rounded-3 my-5 p-3">
+                                                    <h6 class="my-5"> Name : MEGA  |  Age : 26 </h6>
+                                                    <h6 class="my-5"> Condition : If Age &#60; 30 | Display The Name </h6>
                                                         
                                     
                                                     <!-- 1.Attribute Directives : [ngClass] ----------->
-                                                    <div class="w-75 mx-auto text-white border border-5 border-light my-5 py-5">
-                                                        <h4>Class [ngClass]</h4>
+                                                    <div class="text-white border border-5 border-light my-5 py-5">
+                                                        <h6>Class [ngClass]</h6>
                                                         <h1 [class.d-none]=" testAge > 30 ">MEGA</h1>
                                                     </div>
                                     
                                     
                                                     <!-- 2.Structure Directives : *ngIF --------->
-                                                    <div class="w-75 mx-auto text-white border border-5 border-light my-5 py-5">
-                                                        <h4>IF Condition (*ngIF)</h4>
+                                                    <div class="text-white border border-5 border-light my-5 py-5">
+                                                        <h6>IF Condition (*ngIF)</h6>
                                                         <h1 *ngIf=" testAge < 30 ">MEGA</h1>
                                                     </div>
                                         
                                                     
                                     
                                                     <!-- 3.Structure Directives : *ngSwitch ----->
-                                                    <div [ngSwitch]=" testAge < 30 " class="w-75 mx-auto text-white border border-5 border-light my-5 py-5">
-                                                        <h4>Switch (*ngSwitch)</h4>
+                                                    <div [ngSwitch]=" testAge < 30 " class="text-white border border-5 border-light my-5 py-5">
+                                                        <h6>Switch (*ngSwitch)</h6>
                                                         <h1>MEGA</h1>
                                                     </div>
                                         
                                         
-                                                    <div class="w-75 mx-auto text-white border border-5 border-light my-5 py-5">
+                                                    <div class="text-white border border-5 border-light my-5 py-5">
                                                         <h4 class="py-3"> Template [ngIf]</h4>
                                                         <ng-template [ngIf]=" testAge < 30 ">
-                                                            <h1>MEGA</h1>
+                                                            <h6>MEGA</h6>
                                                             <h1>26</h1>
                                                         </ng-template>
                                                     </div>
@@ -1370,14 +1348,14 @@
                                                     <!-- Else Condition------------------------------------------------------------------------------------------>
                                                     <!-- In This Case If Condition Else Display Another Template -->
                                                     
-                                                    <div class="w-75 mx-auto text-white border border-5 border-light my-5 py-5">
-                                                        <h4 class="py-5">(*ngIf) Else : Display Template</h4>
+                                                    <div class="text-white border border-5 border-light my-5 py-5">
+                                                        <h6 class="py-5">(*ngIf) Else : Display Template</h6>
                                                         
 
                                     
                                                         <ng-template #megaTemplate>
-                                                            <div class="w-75 mx-auto text-white py-2">
-                                                                <h4>Condition False | (Age &#62; 30)</h4>
+                                                            <div class="text-white py-2">
+                                                                <h6>Condition False | (Age &#62; 30)</h6>
                                                             </div>
                                                         </ng-template>
                                     
@@ -1391,9 +1369,8 @@
                                         
                                             <!-------------------------------------------------------------------------------------------------------------->
                                         
-                                          </div>
-                                      
                                         </div>
+                                      
                                       
                                     </div>
                                     
@@ -1526,9 +1503,9 @@
 
                                 <h2>app.module.ts </h2>
 
-                                <div class="text-start border p-5 my-4 overflow-auto">
+                                <div class="text-start border my-4 overflow-auto">
                                     
-                                    <pre style="height: 500px;">
+                                    <pre style="height: 500px;" class="m-0">
 <code>
 
     import { NgModule } from '@angular/core';
@@ -1590,9 +1567,9 @@
 
                                 <h2>app-routing.module.ts</h2>
 
-                                <div class="text-start border p-5 my-4 overflow-auto">
+                                <div class="text-start border my-4 overflow-auto">
                                     
-                                    <pre style="height: 500px;">
+                                    <pre style="height: 500px;" class="m-0">
 <code>
 
     import { NgModule             } from '@angular/core';
@@ -1941,9 +1918,9 @@
 
                                 <h2>shared.service.ts</h2>
 
-                                <div class="text-start border p-5 my-4 overflow-auto">
+                                <div class="text-start border my-4 overflow-auto">
                                     
-                                    <pre style="height: 500px;">
+                                    <pre style="height: 500px;" class="m-0">
 <code>
 
     import { Injectable } from '@angular/core';
@@ -2463,9 +2440,9 @@
 
                                 <h2>app.module.ts</h2>
 
-                                <div class="text-start border p-5 my-4 overflow-auto">
+                                <div class="text-start border my-4 overflow-auto">
                                     
-                                    <pre style="height: 500px;">
+                                    <pre style="height: 500px;" class="m-0">
 <code>
 
     import { HttpClientModule } from "@angular/common/http";
@@ -2500,9 +2477,9 @@
 
                                 <h2>mov-api.service.ts</h2>
 
-                                <div class="text-start border p-5 my-4 overflow-auto">
+                                <div class="text-start border my-4 overflow-auto">
                                     
-                                    <pre style="height: 500px;">
+                                    <pre style="height: 500px;" class="m-0">
 <code>
 
     import { HttpClient } from '@angular/common/http';
