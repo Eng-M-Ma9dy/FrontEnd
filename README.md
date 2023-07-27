@@ -1,7 +1,7 @@
 # Website Owner :
 -----------------------
 - Author : Mohamed Magdy Metwally
-- Title : Full-Stack Developer Angular / Node.JS
+- Title : Full-Stack Developer Angular2+ / Node.JS
 #
 # About Website :
 -----------------------
