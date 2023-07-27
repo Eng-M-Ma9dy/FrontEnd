@@ -432,8 +432,8 @@ updatedDateTime()
 
 let createImg = document.createElement("img")
 
-createImg.setAttribute("src","./../../src/Images/Toyota.jpg")
-createImg.setAttribute("alt","Hello")
+createImg.setAttribute("src","../src/Images/Toyota.jpg")
+createImg.setAttribute("alt","Toyota Car")
 
 createImg.classList.add(
     "border" , 
