@@ -501,7 +501,7 @@ var list2 = []
 
 var myHTTP2 = new XMLHttpRequest();
 
-myHTTP2.open("GET","https://api.themoviedb.org/3/trending/movie/day?api_key=1f5b2e3f24af4de07a676323c4f98b83");
+myHTTP2.open("GET","https://api.themoviedb.org/3/trending/movie/day?api_key=d3bfd90f7e28f4160806d3fdd46f2d53");
 
 myHTTP2.send()
 
@@ -600,7 +600,7 @@ async function getMovie4(){
 
     // Default Method of fetch --> get
 
-    let res4 = await fetch("https://api.themoviedb.org/3/trending/movie/day?api_key=1f5b2e3f24af4de07a676323c4f98b83",{
+    let res4 = await fetch("https://api.themoviedb.org/3/trending/movie/day?api_key=d3bfd90f7e28f4160806d3fdd46f2d53",{
         method:"GET"
     });
 
